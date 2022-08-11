@@ -1,4 +1,3 @@
-// import { showUser } from './src/js/showUser'
 const path = require('path')
 const dotenv = require('dotenv').config()
 const cors = require('cors')
@@ -14,16 +13,16 @@ app.use(cors())
 app.use(bodyParser.urlencoded( { extended: false }))
 app.use(bodyParser.json())
 
-app.use('/', express.static('./src/client/views'))
+app.use('/', express.static('src/client/views'))
 
 app.get('/:word', async (req, res) => {
-    const userWord = req.params.word
-    res.send(`¿Como se dice "${userWord}" en espanol?`)
+    const clientWord = req.params.word
+    // res.send(`¿Como se dice "${clientWord}" en espanol?`)
     const apiKey = process.env.SPANGLISH_API_KEY
     
-        let translatedWord = await fetch(`https://www.dictionaryapi.com/api/v3/references/spanish/json/${userWord}?key=${apiKey}`)
+        let translatedWord = await fetch(`https://www.dictionaryapi.com/api/v3/references/spanish/json/${clientWord}?key=${apiKey}`)
             .then(res => res.json())
-            // .then(data => console.log(data[0].shortdef[0]))
+            // .then(data => console.log(data))
             res.send(translatedWord)
 })
 

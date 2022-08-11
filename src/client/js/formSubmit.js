@@ -1,6 +1,14 @@
+import { showUser } from "./showUser"
+
 const formSubmit = () => {
-    console.log('Here is form submit')
+    const button = document.getElementById('btn')
+    button.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    let clientWord = document.getElementById('client-text').value
+    console.log(clientWord)
+    showUser(clientWord)
+    })
 }
 
 export { formSubmit }
-
