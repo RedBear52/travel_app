@@ -12,7 +12,7 @@ const formSubmit = () => {
     console.log(locationValue)
     console.log(departureValue)
     getGeoInfo(locationValue)
-    countDownCalculator(departureValue)
+    countDownCalculator(departureValue, locationValue)
     })
 }
 

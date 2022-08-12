@@ -1,4 +1,4 @@
-const countDownCalculator = (clientDate) => {
+const countDownCalculator = (clientDate, clientDestination) => {
 
     // console.log(arrivalDate)
 
@@ -20,15 +20,17 @@ const countDownCalculator = (clientDate) => {
             remainingTime.innerHTML = 'Adventure awaits!'
             clearInterval(timerRef)
             return
-        } 
-
-        const days = Math.floor(timeRange / day)
+        } else {
+            const days = Math.floor(timeRange / day)
         const hours = Math.floor((timeRange % day) / hour)
         const minutes = Math.floor((timeRange % hour) / minute)
         const seconds = Math.floor((timeRange % minute) / second)
 
-        remainingTime.innerHTML = `${days} days  ${hours} hrs  ${minutes} mins  ${seconds} secs  `
-
+        remainingTime.innerHTML = `
+        <h2>Countdown to your ${clientDestination} trip:</h2>
+        ${days} days  ${hours} hrs  ${minutes} mins  ${seconds} secs  
+        `
+        }
     }
     let timerRef = setInterval(countDownTimer, 1000)
 }
