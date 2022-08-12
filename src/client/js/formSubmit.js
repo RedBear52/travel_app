@@ -1,13 +1,18 @@
+import { countDownCalculator } from "./countDownCalculator"
 import { getGeoInfo } from "./getGeoInfo"
 
 const formSubmit = () => {
     const button = document.getElementById('btn')
     button.addEventListener('click', (e) => {
     e.preventDefault()
-console.log('button done been clicked')
-    let locationValue = document.getElementById('client-text').value
+
+    let locationValue = document.getElementById('destination').value
+    let departureValue = document.getElementById('travel-date').value
+
     console.log(locationValue)
+    console.log(departureValue)
     getGeoInfo(locationValue)
+    countDownCalculator(departureValue)
     })
 }
 

@@ -7,8 +7,8 @@ const getGeoInfo = async (userLocale) => {
         .then(data => {
             console.log(data.geonames[0])
             console.log(data.geonames[0].countryName)
-            console.log(data.geonames[0].lat)
-            console.log(data.geonames[0].lng)
+            console.log(`lattittude: ${data.geonames[0].lat}`)
+            console.log(`longitude: ${data.geonames[0].lng}`)
         })
 }
 

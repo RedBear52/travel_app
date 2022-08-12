@@ -1,3 +1,5 @@
+let projectDb = {}
+
 const path = require('path')
 const express = require('express')
 require('dotenv').config()
@@ -22,7 +24,8 @@ app.use('/', express.static('./dist'))
 app.get('/weatherGrab/:place', async (req, res) => {
     const clientPlace = req.params.place
     const geoNameApiKey = process.env.GEONAMES_API_KEY
-    console.log(geoNameApiKey)
+
+    
 
         let translatedWord = await fetch(`
         http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
