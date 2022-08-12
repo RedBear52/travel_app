@@ -1,13 +1,13 @@
-import { showUser } from "./showUser"
+import { getGeoInfo } from "./getGeoInfo"
 
 const formSubmit = () => {
     const button = document.getElementById('btn')
     button.addEventListener('click', (e) => {
     e.preventDefault()
-
-    let clientWord = document.getElementById('client-text').value
-    console.log(clientWord)
-    showUser(clientWord)
+console.log('button done been clicked')
+    let locationValue = document.getElementById('client-text').value
+    console.log(locationValue)
+    getGeoInfo(locationValue)
     })
 }
 

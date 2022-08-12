@@ -1,0 +1,2 @@
+(()=>{"use strict";document.getElementById("btn").addEventListener("click",(e=>{e.preventDefault(),console.log("button done been clicked");let t=document.getElementById("client-text").value;console.log(t),(async e=>{console.log(e),await fetch(`http://localhost:5200/weatherGrab/:${e}`).then((e=>e.json())).then((e=>{e.countryName}))})(t)}))})();
+//# sourceMappingURL=main.js.map
