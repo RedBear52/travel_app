@@ -1,5 +1,5 @@
-import { countDownCalculator } from "./countDownCalculator"
-import { getGeoInfo } from "./getGeoInfo"
+import { countDownCalculator } from './countDownCalculator'
+import { getGeoInfo } from './getGeoInfo'
 
 const formSubmit = () => {
     const button = document.getElementById('btn')

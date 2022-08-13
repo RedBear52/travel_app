@@ -11,28 +11,46 @@ const fetch = (...args) =>
 const app = express()
 const port = 5200
 
+const geoNameApiKey = process.env.GEONAMES_API_KEY
+const weatherBitApiKey = process.env.WEATHERBIT_API_KEY
+
 app.use(cors())
 app.use(bodyParser.urlencoded( { extended: false })) //need to confirm extended setting
 app.use(bodyParser.json())
 
 app.use('/', express.static('./dist'))
 
-// app.get('/', (req, res)=> {
-//     res.send('Howdy')
-// })
-
-app.get('/weatherGrab/:place', async (req, res) => {
+app.get('/geoFetch/:place', async (req, res) => {
     const clientPlace = req.params.place
-    const geoNameApiKey = process.env.GEONAMES_API_KEY
 
-    
+    let geoPlace = await fetch(`
+    http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
+    `)
+        .then(res => res.json())
+        res.send(geoPlace)
+})
 
-        let translatedWord = await fetch(`
-        http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
-        `)
-            .then(res => res.json())
-            // .then(data => console.log(data))
-            res.send(translatedWord)
+app.get('/weatherFetch/:lat/:lon', async (req, res) => {
+    const lat = req.params.lat
+    const lon = req.params.lon
+
+    let geoWeather = await fetch(`
+     http://api.weatherbit.io/v2.0/current?&lat=${lat}&lon=${lon}&units=i&key=${weatherBitApiKey}
+    `)
+        .then(res => res.json())
+        res.send(geoWeather)
+})
+
+app.get('/forecastFetch/:lat/:lon', async (req, res) => {
+    const lat = req.params.lat
+    const lon = req.params.lon
+    // const date = req.params.date      :date
+
+    let geoWeather = await fetch(`
+    http://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lon}&units=i&days=7&key=${weatherBitApiKey}
+    `)
+        .then(res => res.json())
+        res.send(geoWeather)
 })
 
 app.listen(port, () => {
