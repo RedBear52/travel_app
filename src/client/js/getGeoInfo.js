@@ -1,4 +1,5 @@
 import { getWeatherInfo } from './getWeatherInfo'
+import { getImage } from './getImage'
 
 const getGeoInfo = async (userLocale) => {
     console.log(userLocale)
@@ -13,6 +14,7 @@ const getGeoInfo = async (userLocale) => {
             const lon = data.geonames[0].lng
 
             getWeatherInfo(lat, lon)
+            getImage(userLocale, country)
         })
 }
 

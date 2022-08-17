@@ -13,6 +13,7 @@ const port = 5200
 
 const geoNameApiKey = process.env.GEONAMES_API_KEY
 const weatherBitApiKey = process.env.WEATHERBIT_API_KEY
+const pixaBabyApiKey = process.env.PIXABABY_API_KEY
 
 app.use(cors())
 app.use(bodyParser.urlencoded( { extended: false })) //need to confirm extended setting
@@ -51,6 +52,17 @@ app.get('/forecastFetch/:lat/:lon', async (req, res) => {
     `)
         .then(res => res.json())
         res.send(geoWeather)
+})
+
+app.get('/pixaFetch/:city/:country', async (req, res) => {
+    const city = req.params.city
+    const country = req.params.country
+
+    let placePic = await fetch(`
+    https://pixabay.com/api/?key=${pixaBabyApiKey}&q=${city}+${country}&image_type=photo
+    `)
+        .then(res => res.json())
+        res.send(placePic)
 })
 
 app.listen(port, () => {
