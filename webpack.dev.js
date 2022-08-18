@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { resourceUsage } = require('process')
 
 module.exports = {
     mode: 'development',
@@ -15,10 +16,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.png$/,
+                type: 'media/icons',
+                use: {
+                    loader: 'url-loader'
+                }
+            },
+            {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader'
                 },
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']

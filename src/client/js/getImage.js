@@ -13,7 +13,7 @@ const getImage = async(city, country) => {
             const imgEle = document.createElement('img')
             imgFrame.innerHTML = `
             <h3>Here's a pic of your destination:</h3>
-                <img src="${fetchedImg}" width="800px">
+                <img src="${fetchedImg}" width="600px" height="600px">
             `
             console.log(imgFrame);
             console.log(imgEle);

@@ -65,6 +65,17 @@ app.get('/pixaFetch/:city/:country', async (req, res) => {
         res.send(placePic)
 })
 
+app.get('/countryData/:country', async (req, res) => {
+    const country = req.params.country
+
+    let countryData = await fetch(`
+    https://restcountries.com/v2/name/${country}
+    `)
+        .then(res => res.json())
+        res.send(countryData)
+        
+})
+
 app.listen(port, () => {
     console.log(`server awake and listening on port: ${port}`);
 })
