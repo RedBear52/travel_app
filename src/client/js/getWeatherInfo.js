@@ -31,7 +31,7 @@ const getWeatherInfo = async (lat, lon) => {
                 <br>
                 Today's low: ${day1MinTemp}
                 <br>
-                ${weatherDescription}
+                <img src="../media/icons/${weatherIcon}.png">${weatherDescription}
             `
         })
 }

@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { resourceUsage } = require('process')
 
+
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -16,12 +17,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.png$/,
-                type: 'media/icons',
-                use: {
-                    loader: 'url-loader'
-                }
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset/resource',
             },
+            // {
+            //     test: /\.html$/i,
+            //     use: {
+            //     loader: 'html-loader',
+            //     }
+            // },
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
