@@ -19,7 +19,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded( { extended: false })) //need to confirm extended setting
 app.use(bodyParser.json())
 
-app.use('/', express.static('./dist'))
+app.use('/', express.static('dist'))
 
 app.get('/geoFetch/:place', async (req, res) => {
     const clientPlace = req.params.place
