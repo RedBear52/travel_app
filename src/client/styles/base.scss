@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+@media print {
+    .section-container {
+                border: fuchsia;
+                color: fuchsia;
+            }
+
+    header, footer, form {
+        display: none;
+    }
+}
