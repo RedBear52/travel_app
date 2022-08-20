@@ -1,3 +1,10 @@
+/*------- VARIABLES -------*/
+
+// ------- COLOR PALETTE -------//
+$main-dark: rgb(0, 0, 0);
+$main-light: rgb(255, 255, 255);
+$main-accent: rgb(82, 206, 189);
+
 body {
     // background-color: violet;
 }
@@ -18,3 +25,4 @@ body {
 @page {
     margin: 2cm;
 }
+

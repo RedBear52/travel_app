@@ -1,7 +1,9 @@
+@import 'base';
+
 font {
     font-family: monospace, sans-serif;
 }
 
 footer {
-    background-color: rgb(189, 23, 23);
+    background-color: $main-accent;
 }
