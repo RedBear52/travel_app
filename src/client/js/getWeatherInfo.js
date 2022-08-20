@@ -20,7 +20,6 @@ const getWeatherInfo = async (lat, lon) => {
         .then(res => res.json())
         .then(info => {
             const weatherArray = info.data
-            console.log(weatherArray)
             const forecastEle = document.getElementById('forecast')
             weatherArray.map(item => {
 
@@ -29,10 +28,15 @@ const getWeatherInfo = async (lat, lon) => {
             const weatherIcon = item.weather.icon
             const weatherDescription = item.weather.description
             const itemDate = item.datetime
+            const day = new Date(itemDate)
+            const weekDayId = day.getDay()
+            const daysOfWeek = [
+                'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+            ]
+            const weekDay = daysOfWeek[weekDayId]
             const dailyTemps = document.createElement('ul')
-
             dailyTemps.innerHTML = `
-            <li>Date: ${itemDate}</li>
+            <li>${itemDate}  ${weekDay}</li>
                 <li>High: ${dailyHighTemp}</li>
                 <li>Low: ${dailyLowTemp}</li>
                 <li><img src="https://www.weatherbit.io/static/img/icons/${weatherIcon}.png"></li> 

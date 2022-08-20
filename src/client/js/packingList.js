@@ -1,0 +1,6 @@
+const packingList = () => {
+
+
+}
+
+export { packingList }

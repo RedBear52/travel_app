@@ -1,11 +1,8 @@
 const getCountryInfo  = async (country) => {
-    const lowCountry = country.toLowerCase()
 
     const countryDeets = await fetch(
-        `http://localhost:5200/countryData/${lowCountry}`
+        `http://localhost:5200/countryData/${country}`
         ).then(res => res.json())
-
-        console.log(countryDeets[0])
         
         const countryInfo = countryDeets[0]
         const flag = countryInfo.flag
