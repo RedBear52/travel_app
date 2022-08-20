@@ -19,21 +19,29 @@ const getWeatherInfo = async (lat, lon) => {
         )
         .then(res => res.json())
         .then(info => {
-            console.log(info)
-            const day1MaxTemp = parseInt(info.data[0].max_temp)
-            const day1MinTemp = parseInt(info.data[0].min_temp)
-            const weatherIcon = info.data[0].weather.icon
-            const weatherDescription = info.data[0].weather.description
-            
-            const minMaxTemp = document.getElementById('day-1')
-            minMaxTemp.innerHTML = `
-                Today's high: ${day1MaxTemp}
+            const weatherArray = info.data
+            console.log(weatherArray)
+            const forecastEle = document.getElementById('forecast')
+            weatherArray.map(item => {
+
+            const dailyHighTemp = parseInt(item.high_temp)
+            const dailyLowTemp = parseInt(item.low_temp)
+            const weatherIcon = item.weather.icon
+            const weatherDescription = item.weather.description
+            const itemDate = item.datetime
+            const dailyTemps = document.createElement('ul')
+
+            dailyTemps.innerHTML = `
+            <li>Date: ${itemDate}</li>
+                <li>High: ${dailyHighTemp}</li>
+                <li>Low: ${dailyLowTemp}</li>
+                <li><img src="https://www.weatherbit.io/static/img/icons/${weatherIcon}.png"></li> 
+                <li>${weatherDescription}</li>
                 <br>
-                Today's low: ${day1MinTemp}
-                <br>
-                <img src="https://www.weatherbit.io/static/img/icons/${weatherIcon}.png"> ${weatherDescription}
             `
+            forecastEle.appendChild(dailyTemps)
         })
+    })
 }
 
 export { getWeatherInfo }

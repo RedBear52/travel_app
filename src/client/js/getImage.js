@@ -7,7 +7,7 @@ const getImage = async(city, country) => {
         .then(imgData => {
             console.log(imgData)
             
-            const fetchedImg = imgData.hits[0].largeImageURL
+            const fetchedImg = imgData.hits[0].webformatURL
 
             const imgFrame = document.getElementById('img-frame')
             const imgEle = document.createElement('img')

@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugIn = require('copy-webpack-plugin')
 const { resourceUsage } = require('process')
 
 
@@ -13,7 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -54,6 +55,9 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/client/views/index.html'
+        }),
+        new CopyPlugIn({
+            patterns: [{ from: 'src/client/media', to: 'assets'}]
         })
     ]
 }
