@@ -1,8 +1,16 @@
 @import 'base';
 
-// body {
-//     background-color: rebeccapurple;
-// }
+body {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
 ul {
     list-style-type: none;
@@ -24,6 +32,29 @@ h4 {
     font-family: monospace, sans-serif;
     font-size: 2em;
     padding: 1em;
+}
+
+form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 400px;
+}
+
+.input {
+    border: none;
+    color: #444;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+}
+
+.input::placeholder {
+    color: #d5d5d5;
+}
+
+.input:focus {
+    outline-color: rgb(82, 206, 189);
 }
 
 div#forecast {

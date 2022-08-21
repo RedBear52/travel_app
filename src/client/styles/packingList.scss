@@ -1,5 +1,64 @@
 @import 'base';
-/* @import url(
-    'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap'
-    ); */
+
+// body {
+//             font-family: monospace;
+//             background-color: #f5f5f5;
+//             color: #444;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             height: 100vh;
+//             margin: 0;
+//         }
+
+        h1 {
+            color: rgb(82, 206, 189);
+            opacity: 0.4;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+
+        form {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            width: 400px;
+        }
+
+        .input {
+            border: none;
+            color: #444;
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            display: block;
+            width: 100%;
+        }
+
+        .input::placeholder {
+            color: #d5d5d5;
+        }
+
+        .input:focus {
+            outline-color: rgb(82, 206, 189);
+        }
+
+        .pack-item {
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .pack-item li {
+            list-style-type: none;
+            cursor: pointer;
+            border-top: 1px solid #e5e5e5;
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+        }
+
+        .pack-item li.checked-off {
+            color: #b6b6b6;
+            text-decoration: line-through;
+        }
 

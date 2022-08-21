@@ -1,6 +1,7 @@
 import { getWeatherInfo } from './getWeatherInfo'
 import { getImage } from './getImage'
 import { getCountryInfo } from './getCountryInfo'
+import { packingList } from './packingList'
 
 const getGeoInfo = async (userLocale) => {
     console.log(userLocale)
@@ -16,6 +17,7 @@ const getGeoInfo = async (userLocale) => {
             getWeatherInfo(lat, lon)
             getImage(userLocale, country)
             getCountryInfo(country)
+            packingList(country)
         })
 }
 
