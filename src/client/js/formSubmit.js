@@ -14,9 +14,6 @@ const formSubmit = () => {
     let departureValue = document.getElementById('travel-date').value
     let returnValue = document.getElementById('return-date').value
 
-    console.log(locationValue)
-    console.log(departureValue)
-    console.log(returnValue)
     getGeoInfo(locationValue)
     countDownCalculator(departureValue, locationValue)
     tripLength(departureValue, returnValue)

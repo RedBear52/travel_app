@@ -12,8 +12,6 @@ const getImage = async(city, country) => {
             imgFrame.innerHTML = `
                 <img src="${fetchedImg}" width="600px" height="600px">
             `
-            console.log(imgFrame);
-            console.log(imgEle);
     })
 }
 

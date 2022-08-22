@@ -4,7 +4,7 @@ import { getCountryInfo } from './getCountryInfo'
 import { packingList } from './packingList'
 
 const getGeoInfo = async (userLocale) => {
-    console.log(userLocale)
+    
     const longLatCountry = await fetch(
         `http://localhost:5200/geoFetch/:${userLocale}`
         )
