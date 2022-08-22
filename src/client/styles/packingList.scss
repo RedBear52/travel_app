@@ -12,53 +12,59 @@
 //             margin: 0;
 //         }
 
-        h1 {
-            color: rgb(82, 206, 189);
-            opacity: 0.4;
-            text-align: center;
-            font-size: 3.5rem;
-        }
 
-        form {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 100%;
-            width: 400px;
-        }
 
-        .input {
-            border: none;
-            color: #444;
-            font-size: 2rem;
-            padding: 1rem 2rem;
-            display: block;
-            width: 100%;
-        }
+// h1 {
+//     color: rgb(82, 206, 189);
+//     opacity: 0.4;
+//     text-align: center;
+//     font-size: 3.5rem;
+// }
 
-        .input::placeholder {
-            color: #d5d5d5;
-        }
+// form {
+//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+//     max-width: 100%;
+//     width: 400px;
+// }
 
-        .input:focus {
-            outline-color: rgb(82, 206, 189);
-        }
+// .input {
+//     border: none;
+//     color: #444;
+//     font-size: 2rem;
+//     padding: 1rem 2rem;
+//     display: block;
+//     width: 100%;
+// }
 
-        .pack-item {
-            background-color: #fff;
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-        }
+// .input::placeholder {
+//     color: #d5d5d5;
+// }
 
-        .pack-item li {
-            list-style-type: none;
-            cursor: pointer;
-            border-top: 1px solid #e5e5e5;
-            font-size: 1.5rem;
-            padding: 1rem 2rem;
-        }
+// .input:focus {
+//     outline-color: rgb(82, 206, 189);
+// }
 
-        .pack-item li.checked-off {
-            color: #b6b6b6;
-            text-decoration: line-through;
-        }
+// .pack-item {
+//     background-color: #fff;
+//     padding: 0;
+//     margin: 0;
+//     list-style-type: none;
+// }
+
+// .pack-item li {
+//     list-style-type: none;
+//     cursor: pointer;
+//     border-top: 1px solid #e5e5e5;
+//     font-size: 1.5rem;
+//     padding: 1rem 2rem;
+// }
+
+// .pack-item li.checked-off {
+//     color: #b6b6b6;
+//     text-decoration: line-through;
+// }
+
+// .pack-list-container {
+//     padding: 4em;
+// }
 
