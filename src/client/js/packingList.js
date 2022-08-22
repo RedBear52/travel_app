@@ -21,11 +21,11 @@ const packingList = (country) => {
             packListContainer.style.display = 'none'
         })
 
-        const form = document.getElementById('pack-list-form')
+        const form = document.getElementById('form')
         form.classList.toggle('hidden')
-    //     const input = document.getElementById('input')
-    //     const packList = document.getElementById('pack-list')
-    //     packList.style.display = 'block'
+        const input = document.getElementById('input')
+        const packList = document.getElementById('pack-list-form')
+        packList.style.display = 'block'
         const userListItems = JSON.parse(localStorage.getItem('pack-list'))
         const header = document.createElement('h3')
         header.innerText = `
