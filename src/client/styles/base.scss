@@ -4,6 +4,9 @@
 $main-dark: rgb(0, 0, 0);
 $main-light: rgb(255, 255, 255);
 $main-accent: rgb(82, 206, 189);
+* {
+    padding: 1em;
+}
 
 body {
     // background-color: violet;
