@@ -41,7 +41,6 @@ const getWeatherInfo = async (lat, lon) => {
                 <li>Low: ${dailyLowTemp}</li>
                 <li><img src="https://www.weatherbit.io/static/img/icons/${weatherIcon}.png"></li> 
                 <li>${weatherDescription}</li>
-                <br>
             `
             forecastEle.appendChild(dailyTemps)
         })

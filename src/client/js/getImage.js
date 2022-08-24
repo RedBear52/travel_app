@@ -7,6 +7,8 @@ const getImage = async(city, country) => {
         .then(imgData => {
             
             const fetchedImg = imgData.hits[0].webformatURL
+            const bgImage = imgData.hits[0].largeImageURL
+            console.log(bgImage);
             const imgFrame = document.getElementById('img-frame')
             const imgEle = document.createElement('img')
             imgFrame.innerHTML = `

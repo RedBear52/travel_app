@@ -1,7 +1,8 @@
 @import 'base';
 
 .wrapper {
-    height: 100%;
+    background-color: $main-dark;
+    padding: 1rem;
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
@@ -72,6 +73,11 @@ button {
     background-color: $main-accent;
 }
 
+ul {
+    // padding: 0;
+    // margin: 0;
+}
+
 button:hover {
     color: $main-accent;
     background-color: $main-light;
@@ -81,11 +87,14 @@ button:hover {
 form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 100%;
-    width: 400px;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    list-style-type: none;
 }
 
 section {
-    background-color: $main-accent;
+    background-color: $main-light;
 }
 
 ul {
@@ -94,7 +103,7 @@ ul {
 }
 
 footer {
-    grid-area: ft;
+    grid-area: f;
 }
 
 .close {
@@ -111,9 +120,10 @@ footer {
     border: none;
     color: #444;
     font-size: 2rem;
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: block;
-    width: 100%;
+    margin: auto;
+    width: 80%;
 }
 
 .input::placeholder {
@@ -124,45 +134,32 @@ footer {
     outline-color: rgb(82, 206, 189);
 }
 
-.pack-item {
-    background-color: #fff;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
 
-.pack-item li {
-    list-style-type: none;
-    cursor: pointer;
-    border-top: 1px solid #e5e5e5;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-}
-
-.pack-item li.checked-off {
-    color: #b6b6b6;
-    text-decoration: line-through;
-}
 
 div#forecast {
     display: flex;
     padding: 1em;
-    // margin: 3em 2em;
     border-radius: 4px;
-    background-color: $main-accent;
+    background-color: $sky-blue;
     justify-content: space-between;
     gap: 3.5em;
     text-align: center;
     overflow: scroll;
     box-shadow: 1px 1px 6px 1px rgba(128, 128, 128, 0.4);
+
+    li {
+        border-radius: 4px;
+        box-shadow: 1px 1px 12px 1px rgba(128, 128, 128, 0.4);
+    }
 }
 
 div#forecast::-webkit-scrollbar {
     display: none;
 }
 
-#pack-list-container {
-    // display: none;
+#pack-list {
+    padding: none;
+    margin: 0;
 }
 
 // #pack-list-form.hidden {
@@ -171,26 +168,42 @@ div#forecast::-webkit-scrollbar {
 
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5vh; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100vw; 
+    height: 100vh; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.6); 
   }
   
-  /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
     margin: auto;
+    background-color: #fefefe;
     padding: 20px;
     border: 1px solid #888;
+    overflow: auto;
     width: 80%;
+    height: 80%;
   }
+
+li {
+    background-color: #fff;
+    margin: 0;
+    list-style-type: none;
+    cursor: pointer;
+    border-top: 1px solid #e5e5e5;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+li.checked-off {
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
   
   /* The Close Button */
   .close {

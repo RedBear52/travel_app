@@ -6,7 +6,7 @@ const packingList = (country) => {
     newButton.innerText = `+ create a packing list for ${country} trip`
 
     newButton.addEventListener('click', () => {
-        const container = document.getElementById('pack-list-container')
+        // const container = document.getElementById('pack-list-container')
         const myModal = document.getElementById('my-modal')
         myModal.style.display = 'block'
         
@@ -18,12 +18,11 @@ const packingList = (country) => {
             if (e.target == myModal)
             myModal.style.display = 'none'
         })
+    })
 
         const form = document.getElementById('pack-list-form')
-        form.classList.toggle('hidden')
+        form.style.display = 'block'
         const input = document.getElementById('input')
-        const packList = document.getElementById('pack-list-form')
-        packList.style.display = 'block'
         const userListItems = JSON.parse(localStorage.getItem('pack-list'))
 
         if(userListItems) {
@@ -46,7 +45,7 @@ const packingList = (country) => {
                 }
 
                 listEle.innerText = listItemText
-                packList.appendChild(listEle)
+                form.appendChild(listEle)
                 input.value = ''
 
                 listEle.addEventListener('dblclick', () => {
@@ -60,7 +59,7 @@ const packingList = (country) => {
             }
         }
     // const updateLocalStorage = () => {
-    })
+    
 }
 
 export { packingList }

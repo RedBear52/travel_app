@@ -7,12 +7,13 @@
     <!-- <script src="https://unpkg.com/lodash@4.17.20"></script> -->
     <title>Travel App</title>
 </head>
+
 <body>
-<header>
-    <h4>I'm a header</h4>
-</header>
     <!-- CONTAINER/WRAPPER -->
     <div class="wrapper">
+    <header>
+        <h4>I'm a header</h4>
+    </header>
         <Section class="section-container_entry-form">
             <form name="collect info" type="submit" id="user-entry">
                 <h3>To which city/town are you traveling</h3>
@@ -64,9 +65,9 @@
         <section class="section-container_pack-list" id="section-container_pack-list">
             <div class="modal" id="my-modal">
                 <div class="modal-content" id="pack-list-container">
+                    <span class="close">&times;</span>
                     <h3>Pack List</h3>
                     <form  id="pack-list-form">
-                    <span class="close">&times;</span>
                     <input type="text" class="input" id="input" placeholder="enter pack list item" autocomplete="off">
 
                     <ul class="pack-item" id="pack-list" >
@@ -82,4 +83,5 @@
     <!-- <script src="main.js"></script> -->
     </div>
 </body>
+
 </html>

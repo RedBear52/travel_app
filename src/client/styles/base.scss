@@ -4,20 +4,23 @@
 $main-dark: rgb(0, 0, 0);
 $main-light: rgb(255, 255, 255);
 $main-accent: rgb(82, 206, 189);
+$sky-blue: rgb(118, 197, 228);
+$test-color: rgb(224, 118, 228);
+
 * {
-    padding: 1em;
+    padding: 0.25em;
 }
 
 body {
     // background-color: violet;
 }
 
-h1 {
-    color: rgb(82, 206, 189);
-    opacity: 0.4;
-    text-align: center;
-    font-size: 3.5rem;
-}
+// h1 {
+//     color: rgb(82, 206, 189);
+//     opacity: 0.4;
+//     text-align: center;
+//     font-size: 3.5rem;
+// }
 
 // ----- PRELIMINARY PRINT FORMATTING ----- //
 @media print {
