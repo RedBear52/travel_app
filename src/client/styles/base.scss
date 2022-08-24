@@ -1,3 +1,13 @@
+/*------- IMPORTS -------*/
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Shadows+Into+Light+Two&display=swap');
+@font-face {
+    font-family: 'TerraIgnota';
+    src: url('./fonts/TerraIgnota.woff2') format('woff2'),
+      url('./fonts/TerraIgnota.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+
 /*------- VARIABLES -------*/
 
 // ------- COLOR PALETTE -------//
@@ -6,21 +16,38 @@ $main-light: rgb(255, 255, 255);
 $main-accent: rgb(82, 206, 189);
 $sky-blue: rgb(118, 197, 228);
 $test-color: rgb(224, 118, 228);
+$border-color: rgba(182, 182, 182, 0.4);
+
+// ------- TYPOGRAPHY -------//
+:root {
+    background-image: url('../media/icons/oldtime_map_background.jpg');
+    background-size: cover;
+    font: {
+        family: TerraIgnota;
+        size: 18px;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: TerraIgnota;
+    color: $main-dark;
+    // text-align: center;
+}
 
 * {
     padding: 0.25em;
+    // border-color: $border-color;
 }
+
+// .wrapper {
+    
+//   }
 
 body {
-    // background-color: violet;
 }
 
-// h1 {
-//     color: rgb(82, 206, 189);
-//     opacity: 0.4;
-//     text-align: center;
-//     font-size: 3.5rem;
-// }
+
+
 
 // ----- PRELIMINARY PRINT FORMATTING ----- //
 @media print {

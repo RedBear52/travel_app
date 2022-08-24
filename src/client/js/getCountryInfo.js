@@ -15,7 +15,7 @@ const getCountryInfo  = async (country) => {
 
         const funFactsEle = document.getElementById('fun-facts').innerHTML = `
             <li><h3>Get to know ${countryName}:</h3></li>
-            <li><img src="${flag}" width="180px" margin="0" border="1px"></li>
+            <li><img id="flag" src="${flag}" margin="0" border="1px"></li>
             <li><strong>Capitol city:</strong> ${capital}</li>
             <li><strong>Language:</strong> ${language}</li>
             <li><strong>Currency:</strong> ${currency} (${currencySymbol})</li>
