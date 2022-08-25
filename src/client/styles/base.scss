@@ -16,7 +16,7 @@
 $charcoal: rgba(38, 70, 83, 1);
 $persian-green: rgba(42, 157, 143, 1);
 $maize-crayola: rgba(233, 196, 106, 1);
-$sandy-brown: rgba(244, 162, 97, 1);
+$sandy-brown: rgb(194, 95, 14);
 $burnt-sienna: rgba(231, 111, 81, 1);
 // ------------         -------//
 
@@ -24,15 +24,18 @@ $border-color: rgba(182, 182, 182, 0.4);
 $main-dark: rgb(0, 10, 6);
 $main-light: rgba(245, 245, 245, 0.8);
 
-$trans-background_aqua: rgba(82, 206, 189, 0.1);
+$trans-background_aqua: rgba(119, 240, 224, 0.2);
 $trans-background_orange: rgba(255, 102, 0, 0.1);
 $trans-background_green: rgba(153, 252, 140, 0.1);
 $trans-background_charcoal: rgba(38, 70, 83, 0.1);
 $trans-background_persian-green: rgba(42, 157, 143, 0.1);
 $trans-background_maize-crayola: rgba(233, 196, 106, 0.1);
-$trans-backgroundsandy-brown: rgba(244, 162, 97, 0.1);
-$trans-backgroundburnt-sienna: rgba(231, 111, 81, 0.1);
+$trans-background_sandy-brown: rgba(244, 162, 97, 0.1);
+$trans-background_burnt-sienna: rgba(231, 111, 81, 0.1);
 $trans-background_test-color: rgba(224, 118, 228, 0.1);
+
+$semi-trans_burnt-sienna: rgba(231, 111, 81, 0.9);
+
 
 // ------- TYPOGRAPHY -------//
 :root {

@@ -3,6 +3,7 @@ const packingList = (country) => {
     const packListContainer = document.getElementById('section-container_pack-list')
     const newButton = document.createElement('button')
     packListContainer.appendChild(newButton)
+    newButton.setAttribute('id', 'pack-list-btn')
     newButton.innerText = `+ create a packing list for ${country} trip`
 
     newButton.addEventListener('click', () => {

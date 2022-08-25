@@ -58,7 +58,9 @@
 .section-container_pack-list {
     grid-area: pl;
     background-color: $trans-background_aqua;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-container_trip-length {
@@ -162,7 +164,8 @@ ul {
 
 .countdown {
     z-index: 1;
-    background-color: $trans-backgroundburnt-sienna;
+    background-color: $trans-background_sandy-brown;
+    // background-color: $trans-backgroundburnt-sienna;
 }
 
 .countdown-digits {
@@ -221,7 +224,7 @@ div#forecast {
 }
 
 #countdown-background {
-    background-color: rgba(248, 115, 27, 0.7);
+    background-color: rgba(253, 105, 7, 0.7);
 }
 
 div#forecast::-webkit-scrollbar {
@@ -237,6 +240,26 @@ div#forecast::-webkit-scrollbar {
     // padding: none;
     // margin: 0;
     width: 64%;
+}
+
+#pack-list-btn {
+    background-color: $semi-trans_burnt-sienna;
+    font: {
+        size: 1.5em;
+        family: 'Shadows Into Light Two', sans-serif;
+        weight: bold;
+    }
+
+    min-width: 60%;
+
+    // :hover {
+        
+    // }
+}
+
+#pack-list-btn:hover {
+    color: $main-light;
+        background-color: $maize-crayola;
 }
 
 .modal {
