@@ -39,6 +39,7 @@ const packingList = (country) => {
             let listItemText = listItem.value
             if(listItem) {
                 const listEle = document.createElement('li')
+                listEle.setAttribute('id', 'pack-list-item')
 
                 if(listItem && listItem.completed) {
                     listEle.classList.add('checked-off')

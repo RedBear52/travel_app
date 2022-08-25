@@ -15,9 +15,9 @@
 <body>
     <!-- CONTAINER/WRAPPER -->
     <div class="wrapper">
-    <header>
-        <h4>I'm a header</h4>
-    </header>
+        <section class="section-container_header" id="header">
+            <h1>Oh, the Places You'll Go...</h1>
+        </section>
         <Section class="section-container_entry-form">
             <form name="collect info" type="submit" id="user-entry">
                 <h3>To which city/town are you traveling</h3>
@@ -26,11 +26,11 @@
                 <h3>?</h3>
 
                 <h3>When is your departure date</h3>
-                <input id="travel-date" class="input" type="text" name="english-word" value="09/21/2022">
+                <input id="travel-date" class="input" type="text" name="english-word" value="01/20/2023">
                 <h3>?</h3>
 
                 <h3>When do you return</h3>
-                <input id="return-date" class="input" type="text" name="english-word" value="010/12/2022">
+                <input id="return-date" class="input" type="text" name="english-word" value="01/29/2023">
                 <h3>?</h3>
 
                 <button id="btn" type="button">Get Data</button>
@@ -38,7 +38,11 @@
         </Section>
         <section class="section-container_countdown">
             <div class="countdown">
-                <h3 id="remaining-time"></h3>
+                <ul>
+                    <li>
+                        <h3 id="remaining-time"></h3>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="section-container_trip-length">
@@ -81,9 +85,9 @@
                 </div>
             </div>
         </section>
-    <footer>
+    <section class="section-container_footer" id="footer">
         <h4>I'm a footer</h4>
-    </footer>
+    </section>
     <!-- <script src="main.js"></script> -->
     </div>
 </body>

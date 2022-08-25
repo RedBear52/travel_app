@@ -12,7 +12,7 @@ const getImage = async(city, country) => {
             const imgFrame = document.getElementById('img-frame')
             const imgEle = document.createElement('img')
             imgFrame.innerHTML = `
-                <img src="${fetchedImg}" width="600px" height="600px">
+                <img id="country-photo" src="${fetchedImg}" width="600px" height="600px">
             `
     })
 }
