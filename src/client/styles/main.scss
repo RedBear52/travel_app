@@ -3,7 +3,7 @@
 .wrapper {
     padding: 0;
     display: grid;
-    grid-gap: 1px;
+    grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 80px auto auto 140px;
     grid-template-areas:
@@ -138,6 +138,7 @@ li {
     border-top: 1px solid #e5e5e5;
     font-size: 1.5rem;
     padding: 1rem 2rem;
+    border-radius: 4px;
 }
 
 section {
@@ -199,11 +200,11 @@ ul {
 }
 
 .input::placeholder {
-    color: #d5d5d5;
+    color: rgba(143, 94, 31, 0.4);
 }
 
 .input:focus {
-    outline-color: rgb(190, 147, 67);
+    outline: 3px solid $semi-trans_persian-green;
 }
 
 div#forecast {
@@ -236,11 +237,7 @@ div#forecast::-webkit-scrollbar {
     height: auto;
 }
 
-#pack-list-item {
-    // padding: none;
-    // margin: 0;
-    width: 64%;
-}
+
 
 #pack-list-btn {
     background-color: $semi-trans_burnt-sienna;
@@ -271,6 +268,7 @@ div#forecast::-webkit-scrollbar {
     top: 0;
     width: 100vw; 
     height: 100vh; 
+    margin: 0;
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.6); 
@@ -278,33 +276,76 @@ div#forecast::-webkit-scrollbar {
   
   .modal-content {
     margin: auto;
-    background-image: url('../media/icons/oldtime_map_background.jpg');
-    // mask-image: rgba(245, 245, 245, 0.6);
-    padding: 20px;
+    background-image: url('../media/icons/vintage-notebook_CROPPED.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0.25em;
     border: 1px solid #888;
-    overflow: auto;
+    overflow: hidden;
     width: 80%;
-    height: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        margin-left: 2em;
+        font-size: 3em;
+        padding: 0;
+        margin:  0 0 0 1em;
+    }
+   
+
+    /* The Close Button */
+    .close {
+        color: $main-dark;
+        font-size: 48px;
+        font-weight: bold;
+        padding:0 0.175em;
+        border-color: $main-dark;
+    }
+
+        .close:hover,
+        .close:focus {
+            background-color: $trans-background_persian-green;
+            color: $main-light;
+            border-color: $semi-trans_persian-green;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #pack-list-form {
+            box-shadow: none;
+
+            .input#input {
+                margin-left: 1em;
+                max-width: 45%;
+                background-color: $semi-trans_main-light;
+            }
+            
+            .input#input:focus {
+                outline-color: $maize-crayola;
+                outline: {
+                    border-radius: 16px;
+                }
+            }
+        }
+
+        #pack-list-item {
+            background-color: transparent;
+            border-color: transparent;
+            padding: 0 0 0 1.5em;
+            margin-left: 1rem;
+            width: 45%;
+            font: {
+                size: 2em;
+            }
+        }
   }
-
-
 
 li.checked-off {
     color: #b6b6b6;
     text-decoration: line-through;
 }
   
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
   
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  
+  
