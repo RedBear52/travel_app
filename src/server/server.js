@@ -3,6 +3,7 @@ let projectDb = {}
 const path = require('path')
 const express = require('express')
 require('dotenv').config()
+const colorThief = require('colorthief')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const fetch = (...args) =>
@@ -73,7 +74,6 @@ app.get('/countryData/:country', async (req, res) => {
     `)
         .then(res => res.json())
         res.send(countryData)
-        
 })
 
 app.listen(port, () => {

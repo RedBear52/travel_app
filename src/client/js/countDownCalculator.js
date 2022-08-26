@@ -26,7 +26,7 @@ const countDownCalculator = (clientDate, clientDestination) => {
             remainingTime.innerHTML = `
             <ul>
                 <li id="countdown-background"> 
-                <h2>Countdown to your ${clientDestination} trip:</h2>
+                <h2>Countdown to ${clientDestination} trip:</h2>
                 <span class="countdown-digits">${days} days  ${hours} hrs  ${minutes} mins  ${seconds} secs </span> 
                 </li>
             </ul>

@@ -32,18 +32,76 @@
     grid-area: wr;
     background-color: $trans-background_green;
 
+    .current-weather {
+        background-color: $trans-background_aqua;
+    }
+
+
+    #forecast {
+        display: flex;
+        padding: 1em;
+        border-radius: 4px;
+        background-color: rgba(255, 102, 0, 0.1);
+        justify-content: space-between;
+        gap: 0.0015em;
+        text-align: center;
+        overflow: scroll;
+        box-shadow: 1px 1px 6px 1px rgba(128, 128, 128, 0.4);
+
+        li {
+            border-radius: 14px;
+            background-color: $main-light;
+            width: 10vw;
+            box-shadow: 1px 1px 12px 1px rgba(128, 128, 128, 0.4);
+        }
+    }
+
+    #forecast::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .section-container_countdown {
     grid-area: cd;
     background-image: url('../media/icons/steampunk-clock_image.png');
-    // background-image: url('../media/icons/steampunk-clock_image_15.png');
     background-size: cover;
-
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    .countdown {
+        z-index: 1;
+        background-color: transparent;
+
+        ul {
+            padding: 0;
+        }
+    }
+
+    li {
+        background-color: rgba(253, 246, 226, 0.75);
+    }
+    
+    .countdown-digits {
+        font: {
+            family: 'Fredericka the Great';
+            size: 3rem;
+        }
+        color: $main-light;
+    }
+
+    #countdown-background {
+        background-color: rgba(150, 56, 28, 0.8);
+    }
+
+    #remaining-time {
+        ul {
+            padding:0;
+            margin: 0;
+        }
+    }
+
 }
 
 .section-container_facts {
@@ -152,7 +210,6 @@ ul {
     flex-direction: column;
     list-style-type: none;
     align-content: center;
-
 }
 
 
@@ -163,27 +220,11 @@ ul {
     border: solid rgba(128, 128, 128, 0.4);
 }
 
-.countdown {
-    z-index: 1;
-    background-color: $trans-background_sandy-brown;
-    // background-color: $trans-backgroundburnt-sienna;
-}
-
-.countdown-digits {
-    font: {
-        family: 'Fredericka the Great';
-        size: 3rem;
-    }
-    color: $main-light;
-}
-
 #country-photo {
     box-shadow: 1px 1px 19px 5px rgba(88, 37, 37, 0.9);
 }
 
-.current-weather {
-    background-color: $trans-background_aqua;
-}
+
 
 .hidden {
     display: none;
@@ -207,30 +248,6 @@ ul {
     outline: 3px solid $semi-trans_persian-green;
 }
 
-div#forecast {
-    display: flex;
-    padding: 1em;
-    border-radius: 4px;
-    background-color: rgba(255, 102, 0, 0.1);
-    justify-content: space-between;
-    gap: 3.5em;
-    text-align: center;
-    overflow: scroll;
-    box-shadow: 1px 1px 6px 1px rgba(128, 128, 128, 0.4);
-
-    li {
-        border-radius: 4px;
-        box-shadow: 1px 1px 12px 1px rgba(128, 128, 128, 0.4);
-    }
-}
-
-#countdown-background {
-    background-color: rgba(253, 105, 7, 0.7);
-}
-
-div#forecast::-webkit-scrollbar {
-    display: none;
-}
 
 #flag {
     width: 50%;
@@ -286,6 +303,7 @@ div#forecast::-webkit-scrollbar {
     height: 100%;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
 
     h3 {
         margin-left: 2em;
@@ -297,6 +315,7 @@ div#forecast::-webkit-scrollbar {
 
     /* The Close Button */
     .close {
+        position: relative;
         color: $main-dark;
         font-size: 48px;
         font-weight: bold;
