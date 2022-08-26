@@ -10,7 +10,8 @@ const getWeatherInfo = async (lat, lon) => {
             
             const curTempEle = document.getElementById('locale')
             curTempEle.innerHTML = `
-                Current temperature in ${city} : ${temp}
+                <u>Current temperature</u>
+                ${temp}°f
             `
         })
 
@@ -36,11 +37,12 @@ const getWeatherInfo = async (lat, lon) => {
             const weekDay = daysOfWeek[weekDayId]
             const dailyTemps = document.createElement('ul')
             dailyTemps.innerHTML = `
-            <li>${itemDate}  ${weekDay}</li>
+                <li>${itemDate}</li>  
+                <li>${weekDay}</li>
                 <li>High: ${dailyHighTemp}</li>
                 <li>Low: ${dailyLowTemp}</li>
                 <li><img src="https://www.weatherbit.io/static/img/icons/${weatherIcon}.png"></li> 
-                <li>${weatherDescription}</li>
+                <li id="btm-weather-cell">${weatherDescription}</li>
             `
             forecastEle.appendChild(dailyTemps)
         })

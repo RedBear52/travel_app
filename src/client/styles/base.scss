@@ -12,14 +12,14 @@
 
 // ------- COLOR PALETTE -------//
 
-/* SCSS RGB palette mported from Coolors.co*/
+/* ------- SCSS RGB palette imported from Coolors.co* ------- */
 $charcoal: rgba(38, 70, 83, 1);
 $persian-green: rgba(42, 157, 143, 1);
 $maize-crayola: rgba(233, 196, 106, 1);
 $sandy-brown: rgb(194, 95, 14);
 $burnt-sienna: rgba(231, 111, 81, 1);
-// ------------         -------//
 
+// ------------ COLOR PALETTE VARIATIONS/CUSTOMIZATIONS ------------//
 $border-color: rgba(182, 182, 182, 0.4);
 $main-dark: rgb(0, 10, 6);
 $main-light: rgba(245, 245, 245, 0.8);
@@ -34,11 +34,13 @@ $trans-background_sandy-brown: rgba(244, 162, 97, 0.1);
 $trans-background_burnt-sienna: rgba(231, 111, 81, 0.1);
 $trans-background_test-color: rgba(224, 118, 228, 0.1);
 
-$semi-trans_burnt-sienna: rgba(231, 111, 81, 0.9);
+$semi-trans_burnt-sienna: rgba(231, 111, 81, 0.8);
 $semi-trans_persian-green: rgba(92, 34, 0, 0.3);
+$semi-trans_persian-green_no2: rgba(0, 63, 92, 0.85);
 $semi-trans_main-light: rgba(245, 245, 245, 0.5);
 
-
+// ------- FORMAT VARIABLES ------- //
+$parchment-box-shadow: 1px 1px 12px 1px rgba(128, 128, 128, 0.4);
 
 
 // ------- TYPOGRAPHY -------//
@@ -53,6 +55,7 @@ $semi-trans_main-light: rgba(245, 245, 245, 0.5);
 .wrapper {
     background-image: url('../media/icons/oldtime_map_background.jpg');
     background-size: cover;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -81,6 +84,20 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    padding: 0.75em;
+
+    font: {
+        family: 'Fredericka the Great', sans-serif;
+        // family: 'Shadows Into Light Two', sans-serif;
+    }
+}
+
+
+h4 {
+    font-size: 3em;
+    margin: 0.25em;
+}
 * {
     box-sizing: border-box;
     border-radius: 6px;

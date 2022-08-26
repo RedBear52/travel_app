@@ -7,8 +7,8 @@ const formSubmit = () => {
     button.addEventListener('click', (e) => {
     e.preventDefault()
 
-    const form = document.getElementById('user-entry')
-    form.classList+='hidden'
+    const formContainer = document.getElementById('homepage_entry-form')
+    formContainer.setAttribute('class', 'hidden')
 
     let locationValue = document.getElementById('destination').value
     let departureValue = document.getElementById('travel-date').value

@@ -15,11 +15,6 @@ const getImage = async(city, country) => {
                 <img id="country-photo" src="${fetchedImg}" width="600px" height="600px">
             `
     })
-
-    const img = resolve(process.cwd(), fetchedImg)
-
-    ColorThief.getColor(img)
-    .then(color => { console.log(color) })
 }
 
 export { getImage }

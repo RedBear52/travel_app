@@ -1,4 +1,7 @@
 const countDownCalculator = (clientDate, clientDestination) => {
+    const toggler = document.getElementById('countdown-toggler')
+    toggler.classList.toggle('hidden')
+
     const second = 1000
     const minute = second * 60
     const hour = minute * 60
@@ -8,6 +11,7 @@ const countDownCalculator = (clientDate, clientDestination) => {
         const today = new Date()
         const arrivalDate = new Date(clientDate)
         const remainingTime = document.getElementById('remaining-time')
+        
         const timeRange = arrivalDate - today
         if (timeRange <= -day) {
             remainingTime.innerHTML = 'How was your trip?'

@@ -20,7 +20,6 @@ const getCountryInfo  = async (country) => {
             <li><strong>Language:</strong> ${language}</li>
             <li><strong>Currency:</strong> ${currency} (${currencySymbol})</li>
             <li><strong>Population:</strong> ${population}</li>
-            <li><strong></strong></li>
         `
 }
 export { getCountryInfo }

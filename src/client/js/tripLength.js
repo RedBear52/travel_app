@@ -1,5 +1,7 @@
 const tripLength = (departDate, returnDate) => {
     const tripRangeEle = document.getElementById('trip-length-header')
+    const tripRange = document.getElementById('trip-range')
+    tripRange.classList.toggle('hidden')
     const departDateNumber = new Date(departDate)
     const returnDateNumber = new Date(returnDate)
     const tripDayCount = returnDateNumber.getTime() - departDateNumber.getTime();
@@ -8,15 +10,16 @@ const tripLength = (departDate, returnDate) => {
     const tripEnd = document.getElementById('trip-end')
 
     tripRangeEle.innerHTML = `
-        Trip length: ${tripDayUnits} days 
+        <u>Trip length</u> 
+          ${tripDayUnits} days 
     `
 
     tripStart.innerHTML = `
-     departure date: ${departDate}
+     Departure date: ${departDate}
     `
 
     tripEnd.innerHTML = `
-     return date: ${returnDate}
+     Return date: ${returnDate}
     `
 }
 
