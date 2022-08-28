@@ -1,6 +1,6 @@
 const tripLength = (departDate, returnDate) => {
     const tripRangeEle = document.getElementById('trip-length-header')
-    const tripRange = document.getElementById('trip-range')
+    const tripRange = document.getElementById('trip-list-wrapper')
     tripRange.classList.toggle('hidden')
     const departDateNumber = new Date(departDate)
     const returnDateNumber = new Date(returnDate)

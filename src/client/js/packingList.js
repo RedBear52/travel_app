@@ -51,12 +51,12 @@ const packingList = (country) => {
                 input.value = ''
 
                 listEle.addEventListener('dblclick', () => {
-                    listEle.classList.toggle('checked-off')
+                    listEle.remove()
                 })
 
                 listEle.addEventListener('contextmenu', (e) => {
                     e.preventDefault()
-                    listEle.remove()
+                    listEle.classList.toggle('checked-off')
                 })
             }
         }

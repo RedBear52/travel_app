@@ -21,8 +21,9 @@ $burnt-sienna: rgba(231, 111, 81, 1);
 
 // ------------ COLOR PALETTE VARIATIONS/CUSTOMIZATIONS ------------//
 $border-color: rgba(182, 182, 182, 0.4);
+$button-color: rgba(182, 182, 182, 0.6);
 $main-dark: rgb(0, 10, 6);
-$main-light: rgba(245, 245, 245, 0.8);
+$main-light: rgba(245, 245, 245, 0.9);
 
 $trans-background_aqua: rgba(119, 240, 224, 0.2);
 $trans-background_orange: rgba(255, 102, 0, 0.1);
@@ -37,7 +38,11 @@ $trans-background_test-color: rgba(224, 118, 228, 0.1);
 $semi-trans_burnt-sienna: rgba(231, 111, 81, 0.8);
 $semi-trans_persian-green: rgba(92, 34, 0, 0.3);
 $semi-trans_persian-green_no2: rgba(0, 63, 92, 0.85);
+$semi-trans_persian-green_no3: rgba(0, 63, 92, 0.5);
 $semi-trans_main-light: rgba(245, 245, 245, 0.5);
+$semi-trans_main-light: rgba(245, 245, 245, 0.9);
+$semi-trans_button-color: rgba(182, 182, 182, 0.3);
+$semi-trans_maize-crayola: rgba(233, 196, 106, 0.7);
 
 // ------- FORMAT VARIABLES ------- //
 $parchment-box-shadow: 1px 1px 12px 1px rgba(128, 128, 128, 0.4);
@@ -89,7 +94,6 @@ h3 {
 
     font: {
         family: 'Fredericka the Great', sans-serif;
-        // family: 'Shadows Into Light Two', sans-serif;
     }
 }
 
