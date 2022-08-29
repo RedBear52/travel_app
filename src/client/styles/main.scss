@@ -20,6 +20,15 @@
     grid-area: if;
     background-color: $trans-background_maize-crayola;
 
+    #img-frame {
+        display: flex;
+        justify-content: center;
+    }
+
+        #country-photo {
+            max-width: 100%;
+        }
+
     #img-error-message {
         display: flex;
         align-items: center;
@@ -233,8 +242,27 @@ li {
             background-color: $semi-trans_persian-green;
     }
 
+    #pack-list-instructions {
+        padding: 0;
+        max-width: 45%;
+
+        pre {
+            font: {
+                family: 'Fredericka the Great', sans-serif;
+                size: 1em;
+            }
+            word-wrap: break-word;
+            position: absolute;
+            margin-left: 45%;
+            margin-top: 10%;
+            color: $main-dark;
+        }
+    }
+
     #pack-list-form {
         box-shadow: none;
+
+        
 
         .input#input {
             margin-left: 1em;
@@ -248,6 +276,9 @@ li {
                 border-radius: 16px;
             }
         }
+
+    
+           
     }            
 }
 
@@ -346,7 +377,6 @@ button:hover {
 form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 100%;
-    // display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;

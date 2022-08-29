@@ -1,7 +1,5 @@
-let projectDb = {
-    'backUpImage': 'src/server/headShot.jpg'    
-}
-console.log(projectDb.backUpImage)
+let projectDb = []
+
 const path = require('path')
 const express = require('express')
 require('dotenv').config()
@@ -20,10 +18,29 @@ const pixaBabyApiKey = process.env.PIXABABY_API_KEY
 
 app.use(cors())
 app.use(bodyParser.urlencoded( { extended: false })) //need to confirm extended setting
+            
 app.use(bodyParser.json())
 
 app.use('/', express.static('dist'))
 
+
+// --------------- POST route --- PUSHes TO DB -----------//
+app.post('/post', async (req, res) => {
+    projectDb.push(req.body)
+    console.log(req.body)
+
+    res.send(req.body)
+    // try {
+    //     const userLocation = req.params.userPlace
+    //     console.log(userLocation)
+    //     projectDb.push({ 'userLocation': userLocation})
+    // } catch (err) {
+    //     console.log('Error:', err)
+    // }
+})
+
+
+// ---------------------- GET ROUTES --------------------//
 app.get('/geoFetch/:place', async (req, res) => {
     try {
         const clientPlace = req.params.place
@@ -32,12 +49,22 @@ app.get('/geoFetch/:place', async (req, res) => {
         http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
         `)
             .then(res => res.json())
+            // const infoArr = Object.values(geoPlace)[1]
+            // const filteredInfo = infoArr.filter(item => {
+            //     countryName = item.countryName
+            //     lat = item.lat
+            //     lng = item.lng
+            // }) 
+            // projectDb.concat({
+            //     'countryName': countryName, 
+            //     'lattitude': lat, 
+            //     'longitude': lng
+            // })
             res.send(geoPlace)
     } catch (err) {
         console.log('Geo Fetch Error:', err)
     }
 })
-        
 
 app.get('/weatherFetch/:lat/:lon', async (req, res) => {
     try {
@@ -75,7 +102,7 @@ app.get('/pixaFetch/:city/:country', async (req, res) => {
         const country = req.params.country
 
         let placePic = await fetch(`
-        https://pixabay.com/api/?key=${pixaBabyApiKey}&q=${city}+${country}&image_type=photo
+        https://pixabay.com/api/?key=${pixaBabyApiKey}&q=${city}+${country}&image_type=photo&orientation=horizontal
         `)
         .then(res => res.json())
         res.send(placePic)

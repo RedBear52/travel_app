@@ -10,19 +10,25 @@ const getGeoInfo = async (userLocale) => {
         )
         .then(res => res.json())
         .then(data => {
-            if (data.geonames[0].countryName) {
+            
+            console.log(data)
+        //     if (data.geonames[0].countryName !== undefined) {
                 const country = data.geonames[0].countryName
                 const lat = data.geonames[0].lat
                 const lon = data.geonames[0].lng
+
+                console.log(country, lat, lon);
            
             getWeatherInfo(lat, lon)
             getImage(userLocale, country)
             getCountryInfo(country)
             packingList(country)
             
-        } else {
-            alert('whoop! oh boy...')
-        }
+        // } else {
+        //     alert(`Sorry, something went wrong while fetching your info.
+        //     Please enter a new request`)
+        //     window.location.reload()
+        // }
     })
 }
 

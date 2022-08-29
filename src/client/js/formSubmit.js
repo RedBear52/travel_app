@@ -1,6 +1,7 @@
 import { countDownCalculator } from './countDownCalculator'
 import { getGeoInfo } from './getGeoInfo'
 import { tripLength } from './tripLength'
+import { postUserInput } from './postUserInput'
 
 const formSubmit = () => {
     const button = document.getElementById('btn')
@@ -16,9 +17,14 @@ const formSubmit = () => {
     let departureValue = document.getElementById('travel-date').value
     let returnValue = document.getElementById('return-date').value
 
-    getGeoInfo(locationValue)
-    countDownCalculator(departureValue, locationValue)
-    tripLength(departureValue, returnValue)
+        getGeoInfo(locationValue)
+        countDownCalculator(departureValue, locationValue)
+        tripLength(departureValue, returnValue)
+        postUserInput(`http://localhost:5200/post`, {
+            'userLocale': locationValue,
+            'departTime': departureValue,
+            'returnTime': returnValue
+        })
     })
 }
 

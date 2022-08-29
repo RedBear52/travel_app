@@ -10,7 +10,7 @@ const getImage = async(city, country) => {
                 const fetchedImg = imgData.hits[0].webformatURL
                 const imgFrame = document.getElementById('img-frame')
                 imgFrame.innerHTML = `
-                    <img id="country-photo" src="${fetchedImg}" width="600px" height="600px">
+                    <img id="country-photo" src="${fetchedImg}">
                 `
             } else {
                 const fetchedImg = '/Users/ryanspearman/Desktop/capstoneTravel/src/client/media/icons/oldtime_map_background.jpg'
