@@ -10,6 +10,8 @@ const formSubmit = () => {
     const formContainer = document.getElementById('homepage_entry-form')
     formContainer.setAttribute('class', 'hidden')
 
+    const listEle = document.getElementById('timer-li')
+    listEle.classList.toggle('hidden')
     let locationValue = document.getElementById('destination').value
     let departureValue = document.getElementById('travel-date').value
     let returnValue = document.getElementById('return-date').value

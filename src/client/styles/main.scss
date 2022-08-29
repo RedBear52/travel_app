@@ -20,6 +20,14 @@
     grid-area: if;
     background-color: $trans-background_maize-crayola;
 
+    #img-error-message {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: $semi-trans_main-light;
+        transform: translateY(40%);
+    }
 }
 
 .section-container_entry-form {
@@ -115,12 +123,8 @@
 .section-container_countdown {
     grid-area: cd;
     background-image: url('../media/icons/steampunk-clock_image_15.png');
-    // background-image: url('../media/icons/steampunk-clock_image.png');
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    
 
     #countdown-toggler {
         padding: 0;
@@ -131,42 +135,52 @@
     }
 
         .countdown {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             z-index: 1;
             background-color: transparent;
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 0;
-                align-items: center;
-            }
-        }
-
-    li {
-        background-color: $semi-trans_persian-green_no3;
-        border: none;
-        border-radius: 6px;
-    }
-    
-    .countdown-digits {
-        font: {
-            family: 'monospace';
-            // family: 'Fredericka the Great';
-            size: 3rem;
-        }
-        color: $main-dark;
-    }
-
-    #countdown-background {
-        background-color: $semi-trans_main-light;
-    }
-
-    #remaining-time {
         ul {
-            padding:0;
-            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+            align-items: center;
         }
+
+        ul.hidden {
+            display: none;
+        }
+    }
+
+        li {
+            background-color: $semi-trans_persian-green_no3;
+            border: none;
+            border-radius: 6px;
+
+            
+        }
+        
+        .countdown-digits {
+            font: {
+                family: 'monospace';
+                // family: 'Fredericka the Great';
+                size: 3rem;
+            }
+            color: $main-dark;
+        }
+
+        #countdown-background {
+            background-color: $semi-trans_main-light;
+        }
+
+        #remaining-time {
+            ul {
+                padding:0;
+                margin: 0;
+            }
     }
 
 }

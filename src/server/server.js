@@ -1,5 +1,7 @@
-let projectDb = {}
-
+let projectDb = {
+    'backUpImage': 'src/server/headShot.jpg'    
+}
+console.log(projectDb.backUpImage)
 const path = require('path')
 const express = require('express')
 require('dotenv').config()
@@ -23,57 +25,77 @@ app.use(bodyParser.json())
 app.use('/', express.static('dist'))
 
 app.get('/geoFetch/:place', async (req, res) => {
-    const clientPlace = req.params.place
+    try {
+        const clientPlace = req.params.place
 
-    let geoPlace = await fetch(`
-    http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
-    `)
-        .then(res => res.json())
-        res.send(geoPlace)
+        let geoPlace = await fetch(`
+        http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
+        `)
+            .then(res => res.json())
+            res.send(geoPlace)
+    } catch (err) {
+        console.log('Geo Fetch Error:', err)
+    }
 })
+        
 
 app.get('/weatherFetch/:lat/:lon', async (req, res) => {
-    const lat = req.params.lat
-    const lon = req.params.lon
-
-    let geoWeather = await fetch(`
-     http://api.weatherbit.io/v2.0/current?&lat=${lat}&lon=${lon}&units=i&key=${weatherBitApiKey}
-    `)
-        .then(res => res.json())
-        res.send(geoWeather)
+    try {
+        const lat = req.params.lat
+        const lon = req.params.lon
+    
+        let geoWeather = await fetch(`
+         http://api.weatherbit.io/v2.0/current?&lat=${lat}&lon=${lon}&units=i&key=${weatherBitApiKey}
+        `)
+            .then(res => res.json())
+            res.send(geoWeather)
+    } catch (err) {
+        console.log('Weather Fetch Error:', err);
+    }
 })
 
 app.get('/forecastFetch/:lat/:lon', async (req, res) => {
-    const lat = req.params.lat
-    const lon = req.params.lon
-    // const date = req.params.date      :date
+    try {
+        const lat = req.params.lat
+        const lon = req.params.lon
 
-    let geoWeather = await fetch(`
-    http://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lon}&units=i&days=7&key=${weatherBitApiKey}
-    `)
+        let geoWeather = await fetch(`
+        http://api.weatherbit.io/v2.0/forecast/daily?&lat=${lat}&lon=${lon}&units=i&days=7&key=${weatherBitApiKey}
+        `)
         .then(res => res.json())
         res.send(geoWeather)
+    } catch (err) {
+        console.log('Forecast Fetch Error:', err);
+    }
 })
 
 app.get('/pixaFetch/:city/:country', async (req, res) => {
-    const city = req.params.city
-    const country = req.params.country
+    try {
+        const city = req.params.city
+        const country = req.params.country
 
-    let placePic = await fetch(`
-    https://pixabay.com/api/?key=${pixaBabyApiKey}&q=${city}+${country}&image_type=photo
-    `)
+        let placePic = await fetch(`
+        https://pixabay.com/api/?key=${pixaBabyApiKey}&q=${city}+${country}&image_type=photo
+        `)
         .then(res => res.json())
         res.send(placePic)
+    } catch (err) {
+        console.log('Pixababy Fetch Error:', err);
+    }
 })
 
 app.get('/countryData/:country', async (req, res) => {
-    const country = req.params.country
+    try {
+        const country = req.params.country
 
-    let countryData = await fetch(`
-    https://restcountries.com/v2/name/${country}
-    `)
-        .then(res => res.json())
-        res.send(countryData)
+        let countryData = await fetch(`
+        https://restcountries.com/v2/name/${country}
+        `)
+            .then(res => res.json())
+            res.send(countryData)
+    } catch (err) {
+        console.log('Rest Countries Api Error:', err);
+    }
 })
 
 app.listen(port, () => {
