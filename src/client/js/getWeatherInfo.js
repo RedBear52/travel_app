@@ -47,20 +47,6 @@ const getWeatherInfo = async (lat, lon) => {
             forecastEle.appendChild(dailyTemps)
         })
     })
-
-    // const revealScroll = () => {
-    //     const hoverReact = document.getElementById('weather-container')
-    //     const arrowEle = document.createElement('p')
-    //     hoverReact.addEventListener('mouseover', () => {
-    //         console.log('hovering!')
-    //     arrowEle.innerHTML = `
-    //         <p id="scroll-arrows"> <-------     -------> </p>
-    //     `
-    //     hoverReact.insertAdjacentElement('beforeend', arrowEle)
-    //     })
-    // }
-    // revealScroll()
 }
 
 export { getWeatherInfo }
-// need to add date functionality

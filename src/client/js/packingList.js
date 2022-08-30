@@ -7,7 +7,6 @@ const packingList = (country) => {
     newButton.innerText = `+ create a packing list for ${country} trip`
 
     newButton.addEventListener('click', () => {
-        // const container = document.getElementById('pack-list-container')
         const myModal = document.getElementById('my-modal')
         myModal.style.display = 'block'
         
