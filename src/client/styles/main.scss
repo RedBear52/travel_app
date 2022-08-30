@@ -14,7 +14,11 @@
     "cf cf cf cf wr wr wr wr tl tl tl tl"
     "cf cf cf cf wr wr wr wr pl pl pl pl"
     "f f f f f f f f f f f f";
+
+   
 }
+
+
 
 .section-container_img-facts {
     grid-area: if;
@@ -202,6 +206,14 @@
     justify-content: center;
     text-align: center;
     padding: 1em;
+
+    #facts-error-message {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: $semi-trans_main-light;
+    }
     
     ul {
         padding-left: 0;
@@ -527,4 +539,9 @@ ul {
         }
   }
 
-  
+  .wrapper.black-out {
+    background-image: none;
+
+    background-color: red !important;
+        z-index: 2;
+}

@@ -64,6 +64,13 @@ $parchment-box-shadow: 1px 1px 12px 1px rgba(128, 128, 128, 0.4);
     overflow: hidden;
 }
 
+.wrapper.black-out {
+    background-image: none;
+
+    background-color: red !important;
+        z-index: 2;
+}
+
 html, body {
     margin: 0;
     min-height: 100%;

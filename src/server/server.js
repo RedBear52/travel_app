@@ -49,6 +49,27 @@ app.get('/geoFetch/:place', async (req, res) => {
         http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
         `)
             .then(res => res.json())
+            console.log(geoPlace)
+
+            
+            // .then(data => {
+            // const dataEntries = Object.entries(data)
+            // const headerArr = dataEntries[0]
+            // // const totalResultsNum = Object.values(headerArr)
+            // console.log(headerArr)
+            // })
+            // console.log(geoKeys.contains('totalResultsCount'))
+            
+            
+            // .then(data => {
+            //    const arr = Object.keys(data)
+            //    console.log(arr)
+            // })
+            
+            
+            // console.log(geoPlace[0])
+            // if geoPlace.countryName !== undefined) {
+
             // const infoArr = Object.values(geoPlace)[1]
             // const filteredInfo = infoArr.filter(item => {
             //     countryName = item.countryName
