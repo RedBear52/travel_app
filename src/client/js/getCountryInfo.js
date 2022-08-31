@@ -3,7 +3,7 @@ const getCountryInfo  = async (country) => {
         const countryDeets = await fetch(
             `http://localhost:5200/countryData/${country}`
             ).then(res => res.json())
-           
+            
             const countryInfo = countryDeets[0]
             const flag = countryInfo.flag
             const countryName = countryInfo.name
@@ -27,7 +27,7 @@ const getCountryInfo  = async (country) => {
             const factsFrame = document.getElementById('facts-frame')
                     factsFrame.innerHTML = `
                         <div id="facts-error-message">
-                        <h2>There was a problem fetching info for this location.
+                        <h2>There was a problem fetching some info for this location.
                         Consider refining your search terms and trying again.</h2>
                         </div>
                     `

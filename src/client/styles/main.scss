@@ -41,6 +41,17 @@
         background-color: $semi-trans_main-light;
         transform: translateY(40%);
     }
+    #geo-error-message {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: $semi-trans_main-light;
+    }
+
+    #err {
+        padding: 1em;
+    }
 }
 
 .section-container_entry-form {
