@@ -110,7 +110,6 @@
         text-align: center;
     }
 
-
     #forecast {
         display: flex;
         padding: 1em;
@@ -313,6 +312,8 @@ li {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+
         // background-color: rgba(119, 36, 4, 0.3);
         background-color: rgba(158, 19, 61, 0.3);
         width: 100%;

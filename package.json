@@ -5,7 +5,7 @@
   "main": "server.js",
   "private": true,
   "scripts": {
-    "test": "",
+    "test": "jest",
     "dev": "webpack serve --config webpack.dev.js",
     "start": "nodemon src/server/server.js",
     "build": "webpack --config webpack.prod.js"

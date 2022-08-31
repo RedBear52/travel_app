@@ -20,10 +20,15 @@ const packingList = (country) => {
         })
     })
 
+        
         const form = document.getElementById('pack-list-form')
         form.style.display = 'block'
         const input = document.getElementById('input')
-        const userListItems = JSON.parse(localStorage.getItem('pack-list'))
+        const userUL = document.getElementById('pack-list')
+    console.log(userUL)
+        const userListItems =JSON.parse(localStorage.getItem('listItems'))
+        // not sure about 'userListItems' as the getItem parameter ... 
+
 
         if(userListItems) {
             userListItems.forEach(listItem => addPackListItem(listItem))
@@ -46,7 +51,7 @@ const packingList = (country) => {
                 }
 
                 listEle.innerText = listItemText
-                form.appendChild(listEle)
+                userUL.appendChild(listEle)
                 input.value = ''
 
                 listEle.addEventListener('dblclick', () => {
@@ -59,8 +64,28 @@ const packingList = (country) => {
                 })
             }
         }
-    // const updateLocalStorage = () => {
-    
+
+        const updateLocalStorage = () => {
+            let listItemsEle = document.querySelectorAll('pack-list')
+
+            const listItems = []
+
+           listItemsEle.forEach(item => {
+            console.log(item)
+
+                listItems.push({
+                    text: item.innerText,
+                    checkedOff: item.classList.contains('checked-off')
+                })  
+
+            })
+
+            console.log(form)
+            localStorage.setItem('listItems', JSON.stringify(listItems))
+        }  
+
+    updateLocalStorage()
+
 }
 
 export { packingList }

@@ -26,12 +26,21 @@ app.use('/', express.static('dist'))
 
 // --------------- POST route --- PUSHes TO DB -----------//
 app.post('/post', async (req, res) => {
-    projectDb.push(req.body)
-    console.log(req.body)
+    let data = req.body
+    let newData = {
+        'userLocale':data.userLocale,
+        'departTime':data.departTime,
+        'returnTime':data.returnTime
+    }
+    
+    projectDb.push(newData)
+    console.log(projectDb)
 
-    res.send(req.body)
+
+    res.send(projectDb)
     // try {
     //     const userLocation = req.params.userPlace
+    
     //     console.log(userLocation)
     //     projectDb.push({ 'userLocation': userLocation})
     // } catch (err) {
@@ -49,7 +58,7 @@ app.get('/geoFetch/:place', async (req, res) => {
         http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
         `)
             .then(res => res.json())
-            console.log(geoPlace)
+            // console.log(geoPlace)
 
             
             // .then(data => {
