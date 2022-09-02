@@ -27,7 +27,6 @@ const packingList = (country) => {
         const userUL = document.getElementById('pack-list')
     console.log(userUL)
         const userListItems =JSON.parse(localStorage.getItem('listItems'))
-        // not sure about 'userListItems' as the getItem parameter ... 
 
 
         if(userListItems) {
@@ -48,14 +47,16 @@ const packingList = (country) => {
 
                 if(listItem && listItem.completed) {
                     listEle.classList.add('checked-off')
+                    updateLocalStorage()
                 }
 
                 listEle.innerText = listItemText
-                userUL.appendChild(listEle)
+                form.appendChild(listEle)
                 input.value = ''
 
                 listEle.addEventListener('dblclick', () => {
                     listEle.remove()
+                    updateLocalStorage()
                 })
 
                 listEle.addEventListener('contextmenu', (e) => {
@@ -66,7 +67,7 @@ const packingList = (country) => {
         }
 
         const updateLocalStorage = () => {
-            let listItemsEle = document.querySelectorAll('pack-list')
+            let listItemsEle = document.querySelectorAll('#pack-list-item')
 
             const listItems = []
 
@@ -84,7 +85,7 @@ const packingList = (country) => {
             localStorage.setItem('listItems', JSON.stringify(listItems))
         }  
 
-    updateLocalStorage()
+    // updateLocalStorage()
 
 }
 
