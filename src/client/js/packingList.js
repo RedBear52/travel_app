@@ -56,6 +56,7 @@ function packingList(country) {
             listEle.innerText = listItemText
             userUL.appendChild(listEle)
             input.value = ''
+            updateLocalStorage()
 
             listEle.addEventListener('dblclick', () => {
                 listEle.remove()
