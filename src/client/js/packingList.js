@@ -28,6 +28,7 @@ function packingList(country) {
     const userListItems = JSON.parse(localStorage.getItem('listItems'))
 
     if (userListItems) {
+        console.log(userListItems);
         userListItems.forEach(listItem => addPackListItem(listItem))
     }
 
@@ -40,23 +41,20 @@ function packingList(country) {
     function addPackListItem(listItem) {
 
         let listItemText = input.value
+        console.log(listItemText)
 
         if (listItem) {
             listItemText = listItem.text
-            console.log(listItem)
-            console.log(listItem.text)
-            const listEle = document.createElement('li')
-            listEle.setAttribute('id', 'pack-list-item')
-
-            if (listItem && listItem.checkedOff) {
-                listEle.classList.add('checked-off')
-                updateLocalStorage()
-            }
-
+            if (listItemText) {
+                console.log(listItem.text)
+                let listEle = document.createElement('li')
+                listEle.setAttribute('id', 'pack-list-item')
+                if (listItem && listItem.checkedOff) {
+                    listEle.classList.add('checked-off')
+                    // updateStorage mifght not go here
+                }
+           
             listEle.innerText = listItemText
-            userUL.appendChild(listEle)
-            input.value = ''
-            updateLocalStorage()
 
             listEle.addEventListener('dblclick', () => {
                 listEle.remove()
@@ -66,9 +64,17 @@ function packingList(country) {
             listEle.addEventListener('contextmenu', (e) => {
                 e.preventDefault()
                 listEle.classList.toggle('checked-off')
+                updateLocalStorage()
             })
+
+            userUL.appendChild(listEle)
+            input.value = ''
+            updateLocalStorage()
+            }
         }
+        
     }
+}
 
     function updateLocalStorage() {
         let listItemsEle = document.querySelectorAll('#pack-list-item')
@@ -76,7 +82,6 @@ function packingList(country) {
         const listItems = []
 
         listItemsEle.forEach(item => {
-            console.log(item)
 
             listItems.push({
                 text: item.innerText,
@@ -85,11 +90,10 @@ function packingList(country) {
 
         })
 
-        console.log(form)
         localStorage.setItem('listItems', JSON.stringify(listItems))
     }
 
     // updateLocalStorage()
-}
+// }
 
 export { packingList }
