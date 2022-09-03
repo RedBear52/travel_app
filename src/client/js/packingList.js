@@ -25,40 +25,41 @@ function packingList(country) {
     const input = document.getElementById('input')
     const userUL = document.getElementById('pack-list')
     const userListItems = JSON.parse(localStorage.getItem('listItems'))
+    console.log(userListItems)
 
     if (userListItems) {
+        console.log(userListItems)
         userListItems.forEach(listItem => {
             console.log(listItem)
             addPackListItem(listItem)
         })
-    }
+   
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
 
-        addPackListItem()
-        // remove 'input' parameter?
+        addPackListItem(input)
     })
 
 
-
     function addPackListItem(listItem) {
-        console.log(listItem)
+       if (input) {
         let listItemText = input.value
-        console.log(listItemText)
         // console.log(listItemText)
         if (listItem) {
             listItemText = listItem.text
-            const listEle = document.createElement('li')
-            listEle.setAttribute('id', 'pack-list-item')
-
-            if (listItem && listItem.checkedOff == true) {
-                listEle.classList.add('checked-off')
-            }
+            console.log(listItemText)
+        }
+            
+            if (listItemText) {
+                const listEle = document.createElement('li')
+                listEle.setAttribute('id', 'pack-list-item')
+                if (listItem && listItem.checkedOff) {
+                    listEle.classList.add('checked-off')
+                }
+            
 
             listEle.innerText = listItemText
-            userUL.appendChild(listEle)
-            input.value = ''
 
             listEle.addEventListener('dblclick', () => {
                 listEle.remove()
@@ -70,27 +71,34 @@ function packingList(country) {
                 listEle.classList.toggle('checked-off')
                 updateLocalStorage()
             })
+
+            userUL.appendChild(listEle)
+            input.value = ''
+            updateLocalStorage()
         }
     }
+ 
+            
+        function updateLocalStorage() {
+        let listItemsEle = document.querySelectorAll('#pack-list-item')
 
-}
-        
-    function updateLocalStorage() {
-    let listItemsEle = document.querySelectorAll('#pack-list-item')
+        const listItems = []
 
-    const listItems = []
-
-    Array.from(listItemsEle).forEach(item => {
-        console.log(item)
-        listItems.push({
-            text: item.innerText,
-            checkedOff: item.classList.contains('checked-off')
+        listItemsEle.forEach(item => {
+            console.log(item)
+            listItems.push({
+                text: item.innerText,
+                checkedOff: item.classList.contains('checked-off')
+            })
         })
-    })
 
-    console.log(listItems)
-    localStorage.setItem('listItems', JSON.stringify(listItems))
-}  
+                console.log(listItems)
+                localStorage.setItem('listItems', JSON.stringify(listItems))
+            }  
+        }
+    }
+}       
+
 
     // updateLocalStorage()
 
