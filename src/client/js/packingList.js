@@ -42,18 +42,19 @@ function packingList(country) {
 
         let listItemText = input.value
         console.log(listItemText)
-        const listEle = document.createElement('li')
-        listEle.setAttribute('id', 'pack-list-item')
+        
 
         if (listItem) {
             listItemText = listItem.text
             console.log(listItemText)
+        }
 
             if (listItemText) {
-                if (listItem && listItem.checkedOff) {
-                    listEle.classList.add('checked-off')
-                }
-            }
+                const listEle = document.createElement('li')
+                listEle.setAttribute('id', 'pack-list-item')
+                    if (listItem && listItem.checkedOff) {
+                        listEle.classList.add('checked-off')
+                    }
            
             listEle.innerText = listItemText
 
@@ -69,10 +70,11 @@ function packingList(country) {
                 listEle.classList.toggle('checked-off')
                 updateLocalStorage()
             })
-        }
-    userUL.appendChild(listEle)
-    input.value = ''
-    updateLocalStorage()  
+
+        userUL.appendChild(listEle)
+        input.value = ''
+        updateLocalStorage()  
+    }
 }
     
     function updateLocalStorage() {
