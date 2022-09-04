@@ -13,7 +13,6 @@ const getImage = async(city, country) => {
                     <img id="country-photo" src="${fetchedImg}">
                 `
             } else {
-                // const fetchedImg = '/Users/ryanspearman/Desktop/capstoneTravel/src/client/media/icons/oldtime_map_background.jpg'
                 const imgFrame = document.getElementById('img-frame')
                 imgFrame.innerHTML = `
                     <div id="img-error-message">

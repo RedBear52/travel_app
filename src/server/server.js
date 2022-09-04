@@ -55,41 +55,11 @@ app.get('/geoFetch/:place', async (req, res) => {
         const clientPlace = req.params.place
 
         let geoPlace = await fetch(`
-        http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&username=${geoNameApiKey}
+        http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&isNameRequired=true&username=${geoNameApiKey}
         `)
             .then(res => res.json())
-            // console.log(geoPlace)
+            console.log(geoPlace)
 
-            
-            // .then(data => {
-            // const dataEntries = Object.entries(data)
-            // const headerArr = dataEntries[0]
-            // // const totalResultsNum = Object.values(headerArr)
-            // console.log(headerArr)
-            // })
-            // console.log(geoKeys.contains('totalResultsCount'))
-            
-            
-            // .then(data => {
-            //    const arr = Object.keys(data)
-            //    console.log(arr)
-            // })
-            
-            
-            // console.log(geoPlace[0])
-            // if geoPlace.countryName !== undefined) {
-
-            // const infoArr = Object.values(geoPlace)[1]
-            // const filteredInfo = infoArr.filter(item => {
-            //     countryName = item.countryName
-            //     lat = item.lat
-            //     lng = item.lng
-            // }) 
-            // projectDb.concat({
-            //     'countryName': countryName, 
-            //     'lattitude': lat, 
-            //     'longitude': lng
-            // })
             res.send(geoPlace)
     } catch (err) {
         console.log('Geo Fetch Error:', err)
@@ -149,6 +119,7 @@ app.get('/countryData/:country', async (req, res) => {
         https://restcountries.com/v2/name/${country}
         `)
             .then(res => res.json())
+            console.log(countryData[0]);
             res.send(countryData)
     } catch (err) {
         console.log('Rest Countries Api Error:', err);

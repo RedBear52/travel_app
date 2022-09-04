@@ -3,7 +3,7 @@ const getCountryInfo  = async (country) => {
         const countryDeets = await fetch(
             `http://localhost:5200/countryData/${country}`
             ).then(res => res.json())
-            
+            console.log(countryDeets);
             const countryInfo = countryDeets[0]
             const flag = countryInfo.flag
             const countryName = countryInfo.name
