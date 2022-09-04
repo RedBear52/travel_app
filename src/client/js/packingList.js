@@ -19,6 +19,7 @@ function packingList(country) {
                 myModal.style.display = 'none'
         })
     })
+}
 
 
     const form = document.getElementById('pack-list-form')
@@ -28,7 +29,6 @@ function packingList(country) {
     const userListItems = JSON.parse(localStorage.getItem('listItems'))
 
     if (userListItems) {
-        console.log(userListItems);
         userListItems.forEach(listItem => addPackListItem(listItem))
     }
 
@@ -42,19 +42,22 @@ function packingList(country) {
 
         let listItemText = input.value
         console.log(listItemText)
+        const listEle = document.createElement('li')
+        listEle.setAttribute('id', 'pack-list-item')
 
         if (listItem) {
             listItemText = listItem.text
+            console.log(listItemText)
+
             if (listItemText) {
-                console.log(listItem.text)
-                let listEle = document.createElement('li')
-                listEle.setAttribute('id', 'pack-list-item')
                 if (listItem && listItem.checkedOff) {
                     listEle.classList.add('checked-off')
-                    // updateStorage mifght not go here
                 }
+            }
            
             listEle.innerText = listItemText
+
+             
 
             listEle.addEventListener('dblclick', () => {
                 listEle.remove()
@@ -66,16 +69,12 @@ function packingList(country) {
                 listEle.classList.toggle('checked-off')
                 updateLocalStorage()
             })
-
-            userUL.appendChild(listEle)
-            input.value = ''
-            updateLocalStorage()
-            }
         }
-        
-    }
+    userUL.appendChild(listEle)
+    input.value = ''
+    updateLocalStorage()  
 }
-
+    
     function updateLocalStorage() {
         let listItemsEle = document.querySelectorAll('#pack-list-item')
 
@@ -87,13 +86,9 @@ function packingList(country) {
                 text: item.innerText,
                 checkedOff: item.classList.contains('checked-off')
             })
-
         })
 
         localStorage.setItem('listItems', JSON.stringify(listItems))
     }
-
-    // updateLocalStorage()
-// }
 
 export { packingList }
