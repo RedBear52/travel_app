@@ -3,7 +3,6 @@
 .wrapper {
     padding: 0;
     display: grid;
-    border: 0;
     grid-gap: 2px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 80px auto auto 140px;
@@ -18,8 +17,6 @@
 
    
 }
-
-
 
 .section-container_img-facts {
     grid-area: if;
@@ -148,7 +145,6 @@
     grid-area: cd;
     background-image: url('../media/icons/steampunk-clock_image_15.png');
     background-size: cover;
-    
 
     #countdown-toggler {
         padding: 0;
@@ -165,6 +161,19 @@
             text-align: center;
             z-index: 1;
             background-color: transparent;
+
+        .countdown-quantifiers {
+            font: {
+                family: 'TerraIgnota'
+            }
+        }
+
+        #countdown-to-text {
+            font: {
+                family: 'Fredericka the Great';
+                size: 1.75em;
+            }
+        }
 
         ul {
             display: flex;
@@ -183,8 +192,6 @@
             background-color: $semi-trans_persian-green_no3;
             border: none;
             border-radius: 6px;
-
-            
         }
         
         .countdown-digits {
@@ -205,7 +212,7 @@
                 padding:0;
                 margin: 0;
             }
-    }
+        }
 
 }
 

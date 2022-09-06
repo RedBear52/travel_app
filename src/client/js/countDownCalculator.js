@@ -30,8 +30,15 @@ const countDownCalculator = (clientDate, clientDestination) => {
             remainingTime.innerHTML = `
             <ul>
                 <li id="countdown-background"> 
-                <h2>Countdown to ${clientDestination} trip:</h2>
-                <span class="countdown-digits">${days} days  ${hours} hrs  ${minutes} mins  ${seconds} secs </span> 
+                <h2 id="countdown-to-text">Countdown to ${clientDestination} trip:</h2>
+                <span class="countdown-digits">${days}</span> 
+                <span class="countdown-quantifiers"> days</span>  
+                <span class="countdown-digits">${hours}</span> 
+                <span class="countdown-quantifiers"> hrs</span>  
+                <span class="countdown-digits">${minutes}</span> 
+                <span class="countdown-quantifiers"> mins</span>  
+                <span class="countdown-digits">${seconds}</span> 
+                <span class="countdown-quantifiers"> secs</span> </span> 
                 </li>
             </ul>
             `
