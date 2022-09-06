@@ -3,7 +3,6 @@ let projectDb = []
 const path = require('path')
 const express = require('express')
 require('dotenv').config()
-const colorThief = require('colorthief')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const fetch = (...args) =>
@@ -36,16 +35,7 @@ app.post('/post', async (req, res) => {
     projectDb.push(newData)
     console.log(projectDb)
 
-
     res.send(projectDb)
-    // try {
-    //     const userLocation = req.params.userPlace
-    
-    //     console.log(userLocation)
-    //     projectDb.push({ 'userLocation': userLocation})
-    // } catch (err) {
-    //     console.log('Error:', err)
-    // }
 })
 
 

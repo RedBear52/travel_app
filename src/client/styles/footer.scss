@@ -1,8 +1,37 @@
 @import 'base';
 
-footer {
+#footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0.25em;
+    
     font: {
         family: 'Fredericka the Great';
-        size: 64px;
+        size: 1em;
+    }
+
+    .footer-credits {
+        background-color: $semi-trans_main-light;
+        max-width: 16vw;
+        padding: 1em;
+        border-radius: 4px;
+        color: $main-dark;
     }
 }
+
+#copyright {
+    border-radius: 0;
+    background-color: $main-light;
+    margin: 0;
+    padding: 0.25em;
+
+    font: {
+        family: 'Fredericka the Great';
+    }
+}
+
+
+
