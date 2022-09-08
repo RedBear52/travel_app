@@ -1,0 +1,45 @@
+@import 'base'; 
+
+.section-container_entry-form {
+    margin: 25em;
+    margin-top: 2em;
+    grid-area: ef;
+    background-color: $trans-background_green;
+
+    h3 {
+        font: {
+            family: 'Fredericka the Great', sans-serif;
+        }
+        color: $main-light;
+        background-color: $main-dark;
+    }
+
+    #user-entry {
+        display: flex;
+        flex-direction: column;
+        background-color: $trans-background_aqua;
+        margin: auto;
+
+        input {
+            margin-bottom: 1em;
+            font: {
+                family: 'TerraIgnota'
+            }
+        }
+
+        button {
+            margin-bottom: 1em;
+            min-width: 300px;
+            background-color: $maize-crayola;
+            margin: 1em;
+        }
+
+        button:hover {
+            background-color: $semi-trans_button-color;
+        }
+
+        #user-entry.hidden {
+            display: none;
+        }
+    }
+}

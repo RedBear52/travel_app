@@ -1,0 +1,33 @@
+@import 'base'; 
+
+.section-container_weather {
+    grid-area: wr;
+    background-color: $trans-background_green;
+
+    .current-weather {
+        background-color: $trans-background_aqua;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+        text-align: center;
+    }
+
+    #forecast {
+        display: flex;
+        padding: 1em;
+        border-radius: 2px;
+        background-color: rgba(255, 102, 0, 0.1);
+        justify-content: space-between;
+        text-align: center;
+        overflow: scroll;
+
+            li {
+                border-radius: 2px;
+                background-color: $main-light;
+                width: 12vw;
+                box-shadow: $parchment-box-shadow;
+            }
+
+            #btm-weather-cell {
+                min-height: 12vh;
+            }
+    }
+}

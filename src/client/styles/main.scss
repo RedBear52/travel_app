@@ -14,371 +14,78 @@
     "cf cf cf cf wr wr wr wr tl tl tl tl"
     "cf cf cf cf wr wr wr wr pl pl pl pl"
     "f f f f f f f f f f f f";
-
-   
 }
 
-.section-container_img-facts {
-    grid-area: if;
-    background-color: $trans-background_maize-crayola;
-
-    #img-frame {
-        display: flex;
-        justify-content: center;
-    }
-
-        #country-photo {
-            max-width: 100%;
-        }
-
-    #img-error-message {
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        background-color: $semi-trans_main-light;
-        transform: translateY(40%);
-    }
-    #geo-error-message {
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        background-color: $semi-trans_main-light;
-    }
-
-    #err {
-        padding: 1em;
-    }
-}
-
-.section-container_entry-form {
-    margin: 25em;
-    margin-top: 2em;
-    grid-area: ef;
-    background-color: $trans-background_green;
-
-    h3 {
-
-        font: {
-            family: 'Fredericka the Great', sans-serif;
-        }
-        color: $main-light;
-        background-color: $main-dark;
-    }
-
-    #user-entry {
-        display: flex;
-        flex-direction: column;
-        background-color: $trans-background_aqua;
-        margin: auto;
-
-        input {
-            margin-bottom: 1em;
-            font: {
-                family: 'TerraIgnota'
-            }
-        }
-
-        button {
-            margin-bottom: 1em;
-            min-width: 300px;
-            background-color: $maize-crayola;
-            margin: 1em;
-        }
-
-        button:hover {
-            background-color: $semi-trans_button-color;
-        }
-        
-
-        #user-entry.hidden {
-            display: none;
-        }
-    }
-}
-
-.section-container_weather {
-    grid-area: wr;
-    background-color: $trans-background_green;
-
-    .current-weather {
-        background-color: $trans-background_aqua;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-        text-align: center;
-    }
-
-    #forecast {
-        display: flex;
-        padding: 1em;
-        border-radius: 2px;
-        background-color: rgba(255, 102, 0, 0.1);
-        justify-content: space-between;
-        text-align: center;
-        overflow: scroll;
-
-            li {
-                border-radius: 2px;
-                background-color: $main-light;
-                width: 12vw;
-                box-shadow: $parchment-box-shadow;
-            }
-
-            #btm-weather-cell {
-                min-height: 12vh;
-            }
-    }
-
-    // #scroll-arrows {
-      
-    //     color: fuchsia;
-    //     font-size: 2em;
-    //     z-index: 2;
-    // }
-
-    #forecast::-webkit-scrollbar {
-        // display: none;
-    }
-}
-
-.section-container_countdown {
-    grid-area: cd;
-    background-image: url('../media/icons/steampunk-clock_image_15.png');
-    background-size: cover;
-
-    #countdown-toggler {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $semi-trans_persian-green_no3;
-    }
-
-        .countdown {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            z-index: 1;
-            background-color: transparent;
-
-        .countdown-quantifiers {
-            font: {
-                family: 'TerraIgnota'
-            }
-        }
-
-        #countdown-to-text {
-            font: {
-                family: 'Fredericka the Great';
-                size: 1.75em;
-            }
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0;
-            align-items: center;
-        }
-
-        ul.hidden {
-            display: none;
-        }
-    }
-
-        li {
-            background-color: $semi-trans_persian-green_no3;
-            border: none;
-            border-radius: 6px;
-        }
-        
-        .countdown-digits {
-            font: {
-                family: 'monospace';
-                // family: 'Fredericka the Great';
-                size: 3rem;
-            }
-            color: $main-dark;
-        }
-
-        #countdown-background {
-            background-color: $semi-trans_main-light;
-        }
-
-        #remaining-time {
-            ul {
-                padding:0;
-                margin: 0;
-            }
-        }
-
-}
-
-.section-container_facts {
-    grid-area: cf;
-    background-color: $trans-background_test-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1em;
-
-    #facts-error-message {
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        background-color: $semi-trans_main-light;
-    }
-    
-    ul {
-        padding-left: 0;
-    }
-        li {
-            box-shadow: $parchment-box-shadow;
-        }
-}
-
-.section-container_pack-list {
-    grid-area: pl;
-    background-color: $trans-background_aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    li.checked-off {
-        color: $semi-trans_maize-crayola;
-        text-decoration: line-through;
-    }
-
-li {
-    -webkit-tap-highlight-color: transparent;
-}
-
-    #pack-list-btn {
-        min-width: 80%;
-        background-color: $semi-trans_persian-green_no2;
-        font: {
-            size: 1.5em;
-            family: 'Fredericka the Great', sans-serif;
-            weight: bold;
-        }
-        color: $main-light;
-    }
-    
-    #pack-list-btn:hover {
-            background-color: $semi-trans_persian-green;
-    }
-
-    #pack-list-instructions {
-        padding: 0;
-        max-width: 45%;
-
-        pre {
-            font: {
-                family: 'Fredericka the Great', sans-serif;
-                size: 1em;
-            }
-            word-wrap: break-word;
-            position: absolute;
-            margin-left: 45%;
-            margin-top: 10%;
-            color: $main-dark;
-        }
-    }
-
-    #pack-list-form {
-        box-shadow: none;
-
-        
-
-        .input#input {
-            margin-left: 1em;
-            max-width: 45%;
-            background-color: $semi-trans_main-light;
-        }
-        
-        .input#input:focus {
-            outline-color: $maize-crayola;
-            outline: {
-                border-radius: 16px;
-            }
-        }
-
-    
-           
-    }            
-}
-
-.section-container_trip-length {
-    grid-area: tl;
-    background-color: $trans-background_green;
-
-    #trip-length_header-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        // background-color: rgba(119, 36, 4, 0.3);
-        background-color: rgba(158, 19, 61, 0.3);
-        width: 100%;
-        // background-color: rgba(245, 245, 245, 0.6);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-    }
-
-    #trip-range {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(06vh);
-        width: 100%;
-        background-color: $trans-background_test-color;
-    }
-
-        #trip-length-list {
-            padding-left: 0;
-            width: 94%;
-
-            ul {
-                padding: 0;
-            }
-
-            li {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: $parchment-box-shadow;
-                width: 100%;
-            }
-        }
-}
-
-.section-container_header {
-    grid-area: hd;
-    background-color: $main-light;
-    h1 {
-        color: $main-dark;
-    }
-}
-
-.section-container_footer {
-    grid-area: f;
-    background-color: $trans-background_green;
-
-}
-
-body {
+// ------------------ TYPOGRAPHY -------------------------//
+h1 {
     font: {
-        family: 'TerraIgnota';
-        size: 18px;
+        size: 4rem;
+        family: 'Fredericka the Great';
     }
+    margin: 0;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+h3 {
+    padding: 0.75em;
+
+    font: {
+        family: 'Fredericka the Great', sans-serif;
+    }
+}
+
+h4 {
+    font-size: 3em;
+    margin: 0.25em;
+}
+
+// ------------------------ GLOBAL STYLE/FORMAT -------------------------//
+body {
     background-color: $main-light;
-    color: #444;
     width: 100vw;
     margin: 0;
+}
+
+div {
+    padding: 1em;
+}
+
+section {
+    background-color: rgba(245, 245, 245, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+}
+
+li {
+    background-color: $main-light;
+    margin: 0;
+    list-style-type: none;
+    cursor: pointer;
+    border-top: 1px solid #e5e5e5;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
 }
 
 button {
@@ -395,10 +102,6 @@ button {
     }
 }
 
-div {
-    padding: 1em;
-}
-
 button:hover {
     color: $main-dark;
     background-color: $main-light;
@@ -406,61 +109,9 @@ button:hover {
     transition: ease-in 0.2s;
 }
 
-form {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    list-style-type: none;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-li {
-    background-color: $main-light;
-    margin: 0;
-    list-style-type: none;
-    cursor: pointer;
-    border-top: 1px solid #e5e5e5;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-}
-
-section {
-    background-color: rgba(245, 245, 245, 0.6);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    align-content: center;
-    justify-content: center;
-}
-
-
-
-.close {
-    float: right;
-    padding: 0.4em;
-    border: solid rgba(128, 128, 128, 0.4);
-}
-
-#country-photo {
-    box-shadow: 1px 1px 19px 5px rgba(88, 37, 37, 0.9);
-}
-
-
+// -------------------- STATE-SPECIFIC-GLOBAL STYLE/FORMAT ---------------------------//
 .hidden {
     display: none;
-    // background-color: chartreuse;
 }
 
 .input {
@@ -482,86 +133,4 @@ ul {
 
 .input:focus {
     outline: 6px solid $maize-crayola;
-        // border-radius: 8px;
-}
-
-
-#flag {
-    width: 50%;
-    height: auto;
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 5vh; 
-    left: 0;
-    top: 0;
-    width: 100vw; 
-    height: 100vh; 
-    margin: 0;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.6); 
-  }
-  
-  .modal-content {
-    margin: auto;
-    background-image: url('../media/icons/vintage-notebook_CROPPED.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0.25em;
-    border: 1px solid #888;
-    overflow: hidden;
-    width: 80%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    overflow: scroll;
-
-    h3 {
-        margin-left: 2em;
-        font-size: 3em;
-        padding: 0;
-        margin:  0 0 0 1em;
-    }
-   
-
-    /* The Close Button */
-    .close {
-        position: relative;
-        color: $main-dark;
-        font-size: 48px;
-        font-weight: bold;
-        padding:0 0.175em;
-        border-color: $main-dark;
-    }
-
-        .close:hover,
-        .close:focus {
-            background-color: $trans-background_persian-green;
-            color: $main-light;
-            border-color: $semi-trans_persian-green;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #pack-list-item {
-            background-color: transparent;
-            border-color: transparent;
-            padding: 0 0 0 1.5em;
-            margin-left: 1rem;
-            width: 45%;
-            font: {
-                size: 2em;
-            }
-        }
-  }
-
-  .wrapper.black-out {
-    background-image: none;
-
-    background-color: red !important;
-        z-index: 2;
 }

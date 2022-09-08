@@ -1,6 +1,12 @@
 @import 'base';
 
+.section-container_footer {
+    grid-area: f;
+    background-color: transparent;
+}
+
 #footer-wrapper {
+    background-color: $trans-background_green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,6 +26,11 @@
         border-radius: 4px;
         color: $main-dark;
     }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 #copyright {
@@ -32,6 +43,3 @@
         family: 'Fredericka the Great';
     }
 }
-
-
-

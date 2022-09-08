@@ -1,0 +1,37 @@
+@import 'base'; 
+
+.section-container_img-area {
+    grid-area: if;
+    background-color: $trans-background_maize-crayola;
+
+    #img-frame {
+        display: flex;
+        justify-content: center;
+    }
+
+        #country-photo {
+            max-width: 100%;
+            box-shadow: 1px 1px 19px 5px rgba(88, 37, 37, 0.9);
+        }
+
+    #img-error-message {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: $semi-trans_main-light;
+        transform: translateY(40%);
+    }
+
+    #geo-error-message {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: $semi-trans_main-light;
+    }
+
+    #err {
+        padding: 1em;
+    }
+}

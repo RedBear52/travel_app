@@ -1,0 +1,37 @@
+@import 'base'; 
+
+.section-container_facts {
+    grid-area: cf;
+    background-color: $trans-background_test-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+
+    h3 {
+        font: {
+            family: 'Fredericka the Great';
+        }
+    }
+
+    #facts-error-message {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        background-color: $semi-trans_main-light;
+    }
+
+    #flag {
+        width: 50%;
+        height: auto;
+    }
+    
+    ul {
+        padding-left: 0;
+    }
+        li {
+            box-shadow: $parchment-box-shadow;
+        }
+}

@@ -1,0 +1,42 @@
+@import 'base'; 
+
+.section-container_trip-length {
+    grid-area: tl;
+    background-color: $trans-background_green;
+
+    #trip-length_header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(158, 19, 61, 0.3);
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    #trip-range {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(06vh);
+        width: 100%;
+        background-color: $trans-background_test-color;
+    }
+
+        #trip-length-list {
+            padding-left: 0;
+            width: 94%;
+
+            ul {
+                padding: 0;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: $parchment-box-shadow;
+                width: 100%;
+            }
+        }
+}

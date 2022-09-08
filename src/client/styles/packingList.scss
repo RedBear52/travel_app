@@ -1,70 +1,137 @@
-// @import 'base';
+@import 'base'; 
 
-// body {
-//             font-family: monospace;
-//             background-color: #f5f5f5;
-//             color: #444;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
-//             height: 100vh;
-//             margin: 0;
-//         }
+// ------------- SECTION CONTAINER ----------------//
+.section-container_pack-list {
+    grid-area: pl;
+    background-color: $trans-background_aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    li.checked-off {
+        color: $semi-trans_maize-crayola;
+        text-decoration: line-through;
+    }
 
+li {
+    -webkit-tap-highlight-color: transparent;
+}
 
-// h1 {
-//     color: rgb(82, 206, 189);
-//     opacity: 0.4;
-//     text-align: center;
-//     font-size: 3.5rem;
-// }
+    #pack-list-btn {
+        min-width: 80%;
+        background-color: $semi-trans_persian-green_no2;
+        font: {
+            size: 1.5em;
+            family: 'Fredericka the Great', sans-serif;
+            weight: bold;
+        }
+        color: $main-light;
+    }
+    
+    #pack-list-btn:hover {
+            background-color: $semi-trans_persian-green;
+    }
 
-// form {
-//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-//     max-width: 100%;
-//     width: 400px;
-// }
+    #pack-list-instructions {
+        padding: 0;
+        max-width: 45%;
 
-// .input {
-//     border: none;
-//     color: #444;
-//     font-size: 2rem;
-//     padding: 1rem 2rem;
-//     display: block;
-//     width: 100%;
-// }
+        pre {
+            font: {
+                family: 'Fredericka the Great', sans-serif;
+                size: 1em;
+            }
+            word-wrap: break-word;
+            position: absolute;
+            margin-left: 45%;
+            margin-top: 10%;
+            color: $main-dark;
+        }
+    }
 
-// .input::placeholder {
-//     color: #d5d5d5;
-// }
+    // ------------------ PACK LIST SECTION FORM ---------------------//
+    #pack-list-form {
+        box-shadow: none;
 
-// .input:focus {
-//     outline-color: rgb(82, 206, 189);
-// }
+        .input#input {
+            margin-left: 1em;
+            max-width: 45%;
+            background-color: $semi-trans_main-light;
+        }
+        
+        .input#input:focus {
+            outline-color: $maize-crayola;
+            outline: {
+                border-radius: 16px;
+            }
+        }
+    }            
+}
 
-// .pack-item {
-//     background-color: #fff;
-//     padding: 0;
-//     margin: 0;
-//     list-style-type: none;
-// }
+// --------------------- MODAL RULES ------------------//
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5vh; 
+    left: 0;
+    top: 0;
+    width: 100vw; 
+    height: 100vh; 
+    margin: 0;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.75); 
+  }
+  
+  /* --------- Packing list contents -------------- */
+.modal-content { 
+    margin: auto;
+    background-image: url('../media/icons/vintage-notebook_CROPPED.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0.25em;
+    border: 1px solid #888;
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
 
-// .pack-item li {
-//     list-style-type: none;
-//     cursor: pointer;
-//     border-top: 1px solid #e5e5e5;
-//     font-size: 1.5rem;
-//     padding: 1rem 2rem;
-// }
+    h3 {
+        margin-left: 2em;
+        font-size: 3em;
+        padding: 0;
+        margin:  0 0 0 1em;
+    }
 
-// .pack-item li.checked-off {
-//     color: #b6b6b6;
-//     text-decoration: line-through;
-// }
+    .close {
+        position: relative;
+        color: $main-dark;
+        font-size: 2em;
+        padding: 0.25em;
+        float: right;
+        border: solid rgba(26, 26, 26, 0.8);
+        border-width: 2px;
+    }
 
-// .pack-list-container {
-//     padding: 4em;
-// }
+        .close:hover,
+        .close:focus {
+            background-color: $trans-background_persian-green;
+            color: $main-light;
+            border-color: $semi-trans_persian-green;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
+        #pack-list-item {
+            background-color: transparent;
+            border-color: transparent;
+            padding: 0 0 0 1.5em;
+            margin-left: 1rem;
+            width: 45%;
+            font: {
+                size: 2em;
+            }
+        }
+}
