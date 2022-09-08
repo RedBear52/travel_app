@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugIn = require('copy-webpack-plugin')
 const { resourceUsage } = require('process')
 
-
 module.exports = {
     mode: 'development',
     entry: './src/index.js',

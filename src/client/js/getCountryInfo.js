@@ -1,9 +1,13 @@
 const getCountryInfo  = async (country) => {
+/*getCountryInfo function: 
+Make GET request, parse to json, extract relevant info and store in appropriate variables
+Render fetched and processed coutnry info to the DOM
+Utilizing async/await and try/catch blocks
+*/
     try {
         const countryDeets = await fetch(
             `http://localhost:5200/countryData/${country}`
             ).then(res => res.json())
-            console.log(countryDeets);
             const countryInfo = countryDeets[0]
             const flag = countryInfo.flag
             const countryName = countryInfo.name

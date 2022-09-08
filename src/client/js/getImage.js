@@ -1,12 +1,14 @@
 const getImage = async(city, country) => {
-
+/* getImage function: 
+Make GET request server/pixabay, parse res to json, conditionally handle response err (no img) & alert the user
+OR process sucessful response and render new image to UI
+*/
     const relevantImage = await fetch(
         `http://localhost:5200/pixaFetch/${city}/${country}`
         )
         .then(res => res.json())
         .then(imgData => {
             if (imgData.total !== 0) {
-                console.log(imgData);
                 const fetchedImg = imgData.hits[0].webformatURL
                 const imgFrame = document.getElementById('img-frame')
                 imgFrame.innerHTML = `

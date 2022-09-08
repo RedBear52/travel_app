@@ -1,4 +1,8 @@
-
+ /* packingList function: 
+Dynamically build a 'create Pack List for trip' button and append it to the 
+appropriate section in the DOM
+Add event listener to button: upon click implement 'modal' pack list interface
+*/
 function packingList(country) {
     const packListContainer = document.getElementById('section-container_pack-list')
     const newButton = document.createElement('button')
@@ -26,7 +30,7 @@ function packingList(country) {
     const input = document.getElementById('input')
     const userUL = document.getElementById('pack-list')
     const userListItems = JSON.parse(localStorage.getItem('listItems'))
-
+    // Check local storage for (and display) pre-existing pack list items 
     if (userListItems) {
         userListItems.forEach(listItem => addPackListItem(listItem))
     }
@@ -36,15 +40,17 @@ function packingList(country) {
 
         addPackListItem()
     })
-
+    /* Process either user-inputted (form) OR pre-existing (local storage) data
+    & render to packList UI
+    Create event listeners to handle dbl and right clicks to remove and mark as completed
+    and existing list items
+    Call updateLocalStorage function after any relevant state change
+    */
     function addPackListItem(listItem) {
-
         let listItemText = input.value
-        console.log(listItemText)
         
         if (listItem) {
             listItemText = listItem.text
-            console.log(listItemText)
         }
 
             if (listItemText) {
@@ -72,7 +78,9 @@ function packingList(country) {
         updateLocalStorage()  
     }
 }
-    
+    /* Grab pack list entries, iterate over them, push processed data from forEach iteration
+    to the listItems array and send stringified version to local storage.
+    */
     function updateLocalStorage() {
         let listItemsEle = document.querySelectorAll('#pack-list-item')
 

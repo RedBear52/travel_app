@@ -3,6 +3,10 @@ import { getGeoInfo } from './getGeoInfo'
 import { tripLength } from './tripLength'
 import { postUserInput } from './postUserInput'
 
+/*formSubmit function: 
+Grabbing ELEs, adding Listeners, collecting client data &
+passing collected data on to other modules
+*/
 const formSubmit = () => {
     const button = document.getElementById('btn')
     button.addEventListener('click', (e) => {

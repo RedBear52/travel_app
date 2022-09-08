@@ -1,3 +1,9 @@
+ /* tripLength function: 
+Receive user inputted data (trip departure and return dates)
+Calculate trip length in days
+Render processed info to the UI
+*/
+
 const tripLength = (departDate, returnDate) => {
     const tripRangeEle = document.getElementById('trip-length-header')
     const tripRange = document.getElementById('trip-list-wrapper')
@@ -13,11 +19,9 @@ const tripLength = (departDate, returnDate) => {
         <u>Trip length</u> 
           ${tripDayUnits} days 
     `
-
     tripStart.innerHTML = `
      Departure date: ${departDate}
     `
-
     tripEnd.innerHTML = `
      Return date: ${returnDate}
     `

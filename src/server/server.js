@@ -1,4 +1,4 @@
-let projectDb = []
+let projectDb = [] //Project database
 
 const path = require('path')
 const express = require('express')
@@ -11,12 +11,14 @@ const fetch = (...args) =>
 const app = express()
 const port = 5200
 
+// ------------------- SECRET KEYS ------------------//
 const geoNameApiKey = process.env.GEONAMES_API_KEY
 const weatherBitApiKey = process.env.WEATHERBIT_API_KEY
 const pixaBabyApiKey = process.env.PIXABABY_API_KEY
 
+// ----------------- MIDDLEWARE -------------------//
 app.use(cors())
-app.use(bodyParser.urlencoded( { extended: false })) //need to confirm extended setting
+app.use(bodyParser.urlencoded( { extended: false })) 
             
 app.use(bodyParser.json())
 

@@ -1,5 +1,8 @@
+ /* postuUserInput function: 
+Make POST request to server, sending client-inoputted data
+to be processed and stored in the projectDB(database)
+*/  
 const postUserInput = async (url = '', data = {}) => {
-    console.log(data)
     const res = await fetch (url, {
         method: 'POST',
         credentials: 'same-origin',
@@ -10,7 +13,6 @@ const postUserInput = async (url = '', data = {}) => {
     })
     try {
         const userData = await res.json()
-        console.log(userData)
         return userData
     } catch (err) {
         console.log('Post Request Error:', err);

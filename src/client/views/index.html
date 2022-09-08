@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://unpkg.com/lodash@4.17.20"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-
     <title>Travel App</title>
 </head>
-
 <body>
     <!-- CONTAINER/WRAPPER -->
     <div class="wrapper">
+        <!-- HEADER -->
         <section class="section-container_header" id="header">
             <h1>Oh, the Places You'll Go...</h1>
         </section>
+        <!-- ENTRY FORM -->
         <Section class="section-container_entry-form" id="homepage_entry-form">
             <form name="collect info" type="submit" id="user-entry">
                 <h3>To which city/town are you traveling ?</h3>
-                <!-- <label>Enter word:</label> -->
                 <input id="destination" class="input" type="text" name="english-word">
 
                 <h3>When is your departure date ?</h3>
@@ -33,6 +31,7 @@
                 <button id="btn" type="button">Add Trip & Start Travel Planner</button>
             </form>
         </Section>
+        <!-- COUNTDOWN -->
         <section class="section-container_countdown">
             <div class="countdown hidden" id="countdown-toggler">
                 <ul>
@@ -42,6 +41,7 @@
                 </ul>
             </div>
         </section>
+        <!-- TRIP LENGTH -->
         <section class="section-container_trip-length">
             <div id="trip-length_header-wrapper">
                 <h4 id="trip-length-header"></h4>
@@ -55,6 +55,7 @@
                 </div>
             </div>
         </section>
+        <!-- WEATHER -->
         <section class="section-container_weather" id="weather-container">
             <div class="current-weather">
                 <h4 id="locale"></h4>
@@ -63,14 +64,17 @@
                 <!-- dynamically filled list here -->
             </div>
         </section>
+        <!-- IMAGE -->
         <section class="section-container_img-area">
             <div id="img-frame"><div>
         </section>
+        <!-- COUNTRY FACTS -->
         <section class="section-container_facts"  id="facts-frame">
             <div id="facts-container">
                 <ul id="fun-facts"></ul>    
             </div>
         </section>
+        <!-- PACK LIST -->
         <section class="section-container_pack-list" id="section-container_pack-list">
             <div class="modal" id="my-modal">
                 <div class="modal-content" id="pack-list-container">
@@ -90,52 +94,53 @@
                 </div>
             </div>
         </section>
-    <section class="section-container_footer" id="footer">
-        <div id="footer-wrapper">
-            <p class="footer-credits" id="photo-credits">
-                TravelApp designed & engineered by:
-                <br> 
-                <a href="https://github.com/RedBear52">
-                    Ryan Spearman
-                </a>
-            </p>
-            <p class="footer-credits" id="dev-credits">
-                Photos courtesy of 
-                <a href="https://pixabay.com/">
-                    <img src="../media/icons/pixababy_logo.png" alt="pixababy logo">
-                </a>
-            </p>
-            <p class="footer-credits" id="background-credits">
-                World map design by
-                <a href="https://pixabay.com/users/darkmoon_art-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3236000">Dorothe</a>
-                from
-                <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3236000">
-                Pixabay
-                </a>
-            </p>
-            <p class="footer-credits" id="geo-credits">
-                Global coordinates: 
-                <a href="http://geonames.org/">
-                    <img src="../media/icons/geoNames_logo.gif" alt="geonames logo">
-                </a>
-            </p>
-            <p class="footer-credits" id="weather-credits">
-                Forecasts made possible by:  
-                <a href="https://weatherbit.io/">
-                    Weatherbit
-                </a>
-            </p>
-            <p class="footer-credits" id="country-data-credits">
-                Destination information:
-                <a href="https://restcountries.com">
-                    RESTcountries API
-                </a>
-            </p>
-        </div>
-        <p id="copyright">
-            © 2022 Spearman Productions, LLC
-        </p> 
-    </section>
+        <!-- FOOTER -->
+        <section class="section-container_footer" id="footer">
+            <div id="footer-wrapper">
+                <p class="footer-credits" id="photo-credits">
+                    TravelApp designed & engineered by:
+                    <br> 
+                    <a href="https://github.com/RedBear52">
+                        Ryan Spearman
+                    </a>
+                </p>
+                <p class="footer-credits" id="dev-credits">
+                    Photos courtesy of 
+                    <a href="https://pixabay.com/">
+                        <img src="../media/icons/pixababy_logo.png" alt="pixababy logo">
+                    </a>
+                </p>
+                <p class="footer-credits" id="background-credits">
+                    World map design by
+                    <a href="https://pixabay.com/users/darkmoon_art-1664300/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3236000">Dorothe</a>
+                    from
+                    <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3236000">
+                    Pixabay
+                    </a>
+                </p>
+                <p class="footer-credits" id="geo-credits">
+                    Global coordinates: 
+                    <a href="http://geonames.org/">
+                        <img src="../media/icons/geoNames_logo.gif" alt="geonames logo">
+                    </a>
+                </p>
+                <p class="footer-credits" id="weather-credits">
+                    Forecasts made possible by:  
+                    <a href="https://weatherbit.io/">
+                        Weatherbit
+                    </a>
+                </p>
+                <p class="footer-credits" id="country-data-credits">
+                    Destination information:
+                    <a href="https://restcountries.com">
+                        RESTcountries API
+                    </a>
+                </p>
+            </div>
+            <p id="copyright">
+                © 2022 Spearman Productions, LLC
+            </p> 
+        </section>
     </div>
 </body>
 </html>

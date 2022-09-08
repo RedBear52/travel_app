@@ -1,5 +1,11 @@
 const getWeatherInfo = async (lat, lon) => {
     
+ /* getWeatherInfo function: 
+Make GET request server/weatherbit api, parse res to json,
+process response and render current and weekly forecast to UI
+Use higher order array (map) function to add named day of the week to 
+date data.
+*/   
     const currentWeather = await fetch(
         `http://localhost:5200/weatherFetch/${lat}/${lon}`
         )
@@ -7,7 +13,6 @@ const getWeatherInfo = async (lat, lon) => {
         .then(info => {
             const temp = parseInt(info.data[0].temp)
             const city = info.data[0].city_name
-            
             const curTempEle = document.getElementById('locale')
             curTempEle.innerHTML = `
                 <u>Current temperature</u>
@@ -22,8 +27,8 @@ const getWeatherInfo = async (lat, lon) => {
         .then(info => {
             const weatherArray = info.data
             const forecastEle = document.getElementById('forecast')
-            weatherArray.map(item => {
 
+            weatherArray.map(item => {
             const dailyHighTemp = parseInt(item.high_temp)
             const dailyLowTemp = parseInt(item.low_temp)
             const weatherIcon = item.weather.icon
