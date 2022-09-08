@@ -1,4 +1,5 @@
 const countDownCalculator = (clientDate, clientDestination) => {
+    // Define global variables for the countdown calculator function
     const toggler = document.getElementById('countdown-toggler')
     toggler.classList.toggle('hidden')
 
@@ -8,10 +9,12 @@ const countDownCalculator = (clientDate, clientDestination) => {
     const day = hour * 24
 
     const countDownTimer = () => { 
+        // Create new date objects and store in variables
         const today = new Date()
         const arrivalDate = new Date(clientDate)
         const remainingTime = document.getElementById('remaining-time')
         
+        // Define conditionals to determine time til trip and specify reactive state changes
         const timeRange = arrivalDate - today
         if (timeRange <= -day) {
             remainingTime.innerHTML = 'How was your trip?'
@@ -26,7 +29,7 @@ const countDownCalculator = (clientDate, clientDestination) => {
             const hours = Math.floor((timeRange % day) / hour)
             const minutes = Math.floor((timeRange % hour) / minute)
             const seconds = Math.floor((timeRange % minute) / second)
-
+            // Render results to the UI
             remainingTime.innerHTML = `
             <ul>
                 <li id="countdown-background"> 

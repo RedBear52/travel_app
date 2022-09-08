@@ -22,7 +22,6 @@ app.use(bodyParser.json())
 
 app.use('/', express.static('dist'))
 
-
 // --------------- POST route --- PUSHes TO DB -----------//
 app.post('/post', async (req, res) => {
     let data = req.body
@@ -37,7 +36,6 @@ app.post('/post', async (req, res) => {
 
     res.send(projectDb)
 })
-
 
 // ---------------------- GET ROUTES --------------------//
 app.get('/geoFetch/:place', async (req, res) => {

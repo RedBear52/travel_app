@@ -21,7 +21,6 @@ function packingList(country) {
     })
 }
 
-
     const form = document.getElementById('pack-list-form')
     form.style.display = 'block'
     const input = document.getElementById('input')
@@ -43,7 +42,6 @@ function packingList(country) {
         let listItemText = input.value
         console.log(listItemText)
         
-
         if (listItem) {
             listItemText = listItem.text
             console.log(listItemText)
@@ -57,8 +55,6 @@ function packingList(country) {
                     }
            
             listEle.innerText = listItemText
-
-             
 
             listEle.addEventListener('dblclick', () => {
                 listEle.remove()
