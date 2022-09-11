@@ -34,7 +34,8 @@ module.exports = {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    type: 'module',
                 },
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
