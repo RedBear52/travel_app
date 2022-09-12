@@ -5,10 +5,19 @@
     background-image: url('../media/icons/steampunk-clock_image_15.png');
     background-size: cover;
 
+    #countdown-wrapper {
+        // display: flex;
+        // justify-content: center;
+        // align-self: center;
+        // text-align: center;
+        // align-items: center;
+        
+    }
+
     #countdown-toggler {
         padding: 0;
         margin: 0;
-        width: 100%;
+        // width: 100%;
         height: 100%;
         background-color: $semi-trans_persian-green_no3;
     }
@@ -16,8 +25,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            z-index: 1;
+            // z-index: 1;
             background-color: transparent;
 
         .countdown-quantifiers {
@@ -54,8 +62,8 @@
         
         .countdown-digits {
             font: {
-                family: 'monospace';
-                // family: 'Fredericka the Great';
+                // family: 'monospace';
+                family: 'Fredericka the Great';
                 size: 3rem;
             }
             color: $main-dark;

@@ -4,6 +4,11 @@
     grid-area: wr;
     background-color: $trans-background_green;
 
+    img {
+        align-self: center;
+        width: 100%;
+    }
+
     .current-weather {
         background-color: $trans-background_aqua;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
@@ -22,8 +27,9 @@
             li {
                 border-radius: 2px;
                 background-color: $main-light;
-                width: 12vw;
+                min-width: 12vw;
                 box-shadow: $parchment-box-shadow;
+                overflow: none;
             }
 
             #btm-weather-cell {

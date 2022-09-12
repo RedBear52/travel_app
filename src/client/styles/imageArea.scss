@@ -3,13 +3,20 @@
 .section-container_img-area {
     grid-area: if;
     background-color: $trans-background_maize-crayola;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
 
     #img-frame {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
         #country-photo {
+            display: flex;
+            text-align: center;
             max-width: 100%;
             box-shadow: 1px 1px 19px 5px rgba(88, 37, 37, 0.9);
         }
@@ -20,7 +27,7 @@
         align-content: center;
         justify-content: center;
         background-color: $semi-trans_main-light;
-        transform: translateY(40%);
+        // transform: translateY(40%);
     }
 
     #geo-error-message {

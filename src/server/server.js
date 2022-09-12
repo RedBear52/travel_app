@@ -34,8 +34,6 @@ app.post('/post', async (req, res) => {
     }
     
     projectDb.push(newData)
-    console.log(projectDb)
-
     res.send(projectDb)
 })
 
@@ -48,7 +46,6 @@ app.get('/geoFetch/:place', async (req, res) => {
         http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&isNameRequired=true&username=${geoNameApiKey}
         `)
             .then(res => res.json())
-            console.log(geoPlace)
 
             res.send(geoPlace)
     } catch (err) {

@@ -15,8 +15,8 @@ date data.
             const city = info.data[0].city_name
             const curTempEle = document.getElementById('locale')
             curTempEle.innerHTML = `
-                <u>Current temperature</u>
-                ${temp}°f
+                <u>Current temperature </u>
+                ${temp}°f 
             `
         })
 
