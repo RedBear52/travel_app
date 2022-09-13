@@ -1,8 +1,8 @@
-@import 'base'; 
+@import 'base';
 
-/* -----TABLET AND MOBILE----- */
+/* --------------- TABLET AND MOBILE --------------- */
 @media (min-width: 400px) and (max-width: 992px) {
-    /* -----CONTAINER----- */
+    /* Container */
     .wrapper {
         padding: 0;
         display: grid;
@@ -21,43 +21,18 @@
         "f f f f f f f f f f f f";
     }
 
-    
-    /* -----CLASS PROPERTIES----- */
-    .section-container_countdown {
-
-        #countdown-wrapper {
-            // background-color: violet;
-            // overflow: hidden;
-
-        ul {
-            // background-color: red;
-
-            // li {
-                // max-height: 100%;
-                // background-color: none;
-                // padding: 0;
-        //     }
-        }
-    }
-    }
-
+    /* Trip Length Section */
     #trip-list-wrapper {
         transform: translateY(-6vh);
     }
 }
 
-/* -----DESKTOP----- */
+/* --------------- DESKTOP --------------- */
 @media (min-width: 993px) and (max-width: 1200px) {
-    /* -----ELEMENT PROPERTIES----- */
-    // h1 {
-    //     font-size: 1em;
-    // }
+    /* -----No Change----- */
     }
 
-/* -----LARGE SCREEN/TV----- */
+/* --------------- LARGE SCREEN/TV --------------- */
 @media (min-width: 1201px) and (max-width: 1920px) {
-    /* -----ELEMENT PROPERTIES----- */
-    // h1 {
-    //     font-size: 1.25em;
-    // }
+       /* -----No Change----- */
     }
