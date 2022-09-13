@@ -68,9 +68,9 @@ Before the form and the subsequent API request can function properly, you'll nee
 
 Once you have all of the necessary secret keys of your own, create a `.env` file in the root directory of the project and add the following code to the file:
 
-`GEONAMES_API_KEY = <your geonames api key>
-WEATHERBIT_API_KEY  = <your weatherbit api key>
-PIXABABY_API_KEY = <your pixabay api key>`
+`GEONAMES_API_KEY = <your geonames api key>`
+`WEATHERBIT_API_KEY  = <your weatherbit api key>`
+`PIXABABY_API_KEY = <your pixabay api key>`
 
 Save the file and you should be good to go. If you run into trouble with this step, be sure to check out the documentation on the node `dotenv` package which is used in this (and many other) projects to make for easy management of enviornment variables.
 
