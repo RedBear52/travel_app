@@ -83,7 +83,7 @@ NOTE: This will serve up your dev mode site at: http://localhost:3001
 [(Back to Table of Contents)](#table-of-contents)
 Best used as a learning tool to practice and improve your own understanding of the above-mentioned web technologies and how they typically function within a project.
 
-This is a relatively complex project, built from scratch, without any front end frameworks. On top of that, it uses Webpack and requires some basic but custom config as well as use of loaders and plugins and should make for very useful practice for other beginning developers who are willing to dig into the appropriate docs and resources.
+This is a relatively complex project for a beginner programmer (like myself), built from scratch, without any front end frameworks. On top of that, it uses Webpack and requires some basic but custom config as well as use of loaders and plugins and should make for very useful practice for other beginning developers who are willing to dig into the appropriate docs and resources.
 
 # Testing
 [(Back to Table of Contents)](#table-of-contents)
