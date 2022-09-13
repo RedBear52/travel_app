@@ -25,7 +25,6 @@
     .wrapper.submitted {
         grid-template-areas:
         "hd hd hd hd hd hd hd hd hd hd hd hd"
-        // "ef ef ef ef ef ef ef ef ef ef ef ef"
         "if if if if if if if if if if if if"
         "cd cd cd cd cd cd cd cd cd cd cd cd"
         "tl tl tl tl tl tl tl tl tl tl tl tl"
@@ -61,8 +60,6 @@
                 size: 0.5em;
             }
         }
-
-        
     }
 }
 

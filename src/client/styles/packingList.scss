@@ -13,55 +13,55 @@
         text-decoration: line-through;
     }
 
-li {
-    -webkit-tap-highlight-color: transparent;
-}
-
-#pack-list-btn {
-    min-width: 80%;
-    background-color: $semi-trans_persian-green_no2;
-    font: {
-        size: 1.5em;
-        family: 'Fredericka the Great', sans-serif;
-        weight: bold;
+    li {
+        -webkit-tap-highlight-color: transparent;
     }
-    color: $main-light;
-}
 
-#pack-list-btn:hover {
-        background-color: $semi-trans_persian-green;
-}
-
-#pack-list-instructions {
-    padding: 0;
-    max-width: 45%;
-
-    pre {
+    #pack-list-btn {
+        min-width: 80%;
+        background-color: $semi-trans_persian-green_no2;
         font: {
+            size: 1.5em;
             family: 'Fredericka the Great', sans-serif;
-            size: 1em;
+            weight: bold;
         }
-        color: $main-dark;
+        color: $main-light;
     }
-}
+
+    #pack-list-btn:hover {
+            background-color: $semi-trans_persian-green;
+    }
+
+    #pack-list-instructions {
+        padding: 0;
+        max-width: 45%;
+
+        pre {
+            font: {
+                family: 'Fredericka the Great', sans-serif;
+                size: 1em;
+            }
+            color: $main-dark;
+        }
+    }
 
 // ------------------ PACK LIST SECTION FORM ---------------------//
 #pack-list-form {
     box-shadow: none;
 
-    .input#input {
-        margin-left: 1em;
-        min-width: 30vw;
-        background-color: $semi-trans_main-light;
-    }
-    
-    .input#input:focus {
-        outline-color: $maize-crayola;
-        outline: {
-            border-radius: 16px;
+        .input#input {
+            margin-left: 1em;
+            min-width: 30vw;
+            background-color: $semi-trans_main-light;
         }
-    }
-}            
+        
+        .input#input:focus {
+            outline-color: $maize-crayola;
+            outline: {
+                border-radius: 16px;
+            }
+        }
+    }            
 }
 
 // --------------------- MODAL RULES ------------------//
@@ -135,11 +135,8 @@ h3 {
             size: 2em;
         }
     }
-
-    
 }
 
 #pack-list-container {
     margin: auto;
 }
-

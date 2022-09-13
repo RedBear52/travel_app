@@ -46,7 +46,6 @@ app.get('/geoFetch/:place', async (req, res) => {
         http://api.geonames.org/searchJSON?q=${clientPlace}&maxRows=10&isNameRequired=true&username=${geoNameApiKey}
         `)
             .then(res => res.json())
-
             res.send(geoPlace)
     } catch (err) {
         console.log('Geo Fetch Error:', err)
@@ -106,7 +105,6 @@ app.get('/countryData/:country', async (req, res) => {
         https://restcountries.com/v2/name/${country}
         `)
             .then(res => res.json())
-            console.log(countryData[0]);
             res.send(countryData)
     } catch (err) {
         console.log('Rest Countries Api Error:', err);

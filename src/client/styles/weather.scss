@@ -3,6 +3,8 @@
 .section-container_weather {
     grid-area: wr;
     background-color: $trans-background_green;
+    min-width: 0;
+
 
     img {
         align-self: center;
