@@ -11,6 +11,21 @@
         grid-template-rows: 80px auto auto 140px;
         grid-template-areas:
         "hd hd hd hd hd hd hd hd hd hd hd hd"
+        "ef ef ef ef ef ef ef ef ef ef ef ef"
+        "if if if if if if if if if if if if"
+        "cd cd cd cd cd cd cd cd cd cd cd cd"
+        "tl tl tl tl tl tl tl tl tl tl tl tl"
+        "tl tl tl tl tl tl tl tl tl tl tl tl"
+        "cf cf cf cf cf cf cf cf cf cf cf cf"
+        "wr wr wr wr wr wr wr wr wr wr wr wr"
+        "pl pl pl pl pl pl pl pl pl pl pl pl"
+        "f f f f f f f f f f f f"; 
+    }
+
+    .wrapper.submitted {
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd hd hd hd"
+        // "ef ef ef ef ef ef ef ef ef ef ef ef"
         "if if if if if if if if if if if if"
         "cd cd cd cd cd cd cd cd cd cd cd cd"
         "tl tl tl tl tl tl tl tl tl tl tl tl"
@@ -25,14 +40,43 @@
     #trip-list-wrapper {
         transform: translateY(-6vh);
     }
+
+    #pack-list {
+        padding-left: 0;
+        #pack-list-item {
+            padding-left: 1em;
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+
+    .modal-content {
+        font: {
+            size: 0.65em;
+        }
+
+        input::placeholder {
+            font: {
+                size: 0.5em;
+            }
+        }
+
+        
+    }
 }
 
 /* --------------- DESKTOP --------------- */
-@media (min-width: 993px) and (max-width: 1200px) {
-    /* -----No Change----- */
-    }
+@media (min-width: 601px) and (max-width: 1600px) {
 
-/* --------------- LARGE SCREEN/TV --------------- */
-@media (min-width: 1201px) and (max-width: 1920px) {
-       /* -----No Change----- */
+    .modal-content {
+        max-width: 900px;
     }
+}
+/* --------------- LARGE SCREEN/TV --------------- */
+@media (min-width: 1601px) and (max-width: 4000px) {
+
+    .modal-content {
+        max-width: 900px;
+    }
+}

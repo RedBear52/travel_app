@@ -13,6 +13,8 @@ const formSubmit = () => {
 
     const formContainer = document.getElementById('homepage_entry-form')
     formContainer.setAttribute('class', 'hidden')
+    const wrapState = document.getElementById('wrapper')
+    wrapState.classList.toggle('submitted')
 
     const listEle = document.getElementById('timer-li')
     listEle.classList.toggle('hidden')

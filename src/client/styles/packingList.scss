@@ -17,121 +17,129 @@ li {
     -webkit-tap-highlight-color: transparent;
 }
 
-    #pack-list-btn {
-        min-width: 80%;
-        background-color: $semi-trans_persian-green_no2;
+#pack-list-btn {
+    min-width: 80%;
+    background-color: $semi-trans_persian-green_no2;
+    font: {
+        size: 1.5em;
+        family: 'Fredericka the Great', sans-serif;
+        weight: bold;
+    }
+    color: $main-light;
+}
+
+#pack-list-btn:hover {
+        background-color: $semi-trans_persian-green;
+}
+
+#pack-list-instructions {
+    padding: 0;
+    max-width: 45%;
+
+    pre {
         font: {
-            size: 1.5em;
             family: 'Fredericka the Great', sans-serif;
-            weight: bold;
+            size: 1em;
         }
-        color: $main-light;
+        color: $main-dark;
+    }
+}
+
+// ------------------ PACK LIST SECTION FORM ---------------------//
+#pack-list-form {
+    box-shadow: none;
+
+    .input#input {
+        margin-left: 1em;
+        min-width: 30vw;
+        background-color: $semi-trans_main-light;
     }
     
-    #pack-list-btn:hover {
-            background-color: $semi-trans_persian-green;
-    }
-
-    #pack-list-instructions {
-        padding: 0;
-        max-width: 45%;
-
-        pre {
-            font: {
-                family: 'Fredericka the Great', sans-serif;
-                size: 1em;
-            }
-            word-wrap: break-word;
-            position: absolute;
-            margin-left: 45%;
-            margin-top: 10%;
-            color: $main-dark;
+    .input#input:focus {
+        outline-color: $maize-crayola;
+        outline: {
+            border-radius: 16px;
         }
     }
-
-    // ------------------ PACK LIST SECTION FORM ---------------------//
-    #pack-list-form {
-        box-shadow: none;
-
-        .input#input {
-            margin-left: 1em;
-            max-width: 45%;
-            background-color: $semi-trans_main-light;
-        }
-        
-        .input#input:focus {
-            outline-color: $maize-crayola;
-            outline: {
-                border-radius: 16px;
-            }
-        }
-    }            
+}            
 }
 
 // --------------------- MODAL RULES ------------------//
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 5vh; 
-    left: 0;
-    top: 0;
-    width: 100vw; 
-    height: 100vh; 
-    margin: 0;
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.75); 
-  }
-  
-  /* --------- Packing list contents -------------- */
-.modal-content { 
-    margin: auto;
-    background-image: url('../media/icons/vintage-notebook_CROPPED.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0.25em;
-    border: 1px solid #888;
-    overflow: hidden;
-    width: 80%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    overflow: scroll;
-
-    h3 {
-        margin-left: 2em;
-        font-size: 3em;
-        padding: 0;
-        margin:  0 0 0 1em;
-    }
-
-    .close {
-        position: relative;
-        color: $main-dark;
-        font-size: 2em;
-        padding: 0.25em;
-        float: right;
-        border: solid rgba(26, 26, 26, 0.8);
-        border-width: 2px;
-    }
-
-        .close:hover,
-        .close:focus {
-            background-color: $trans-background_persian-green;
-            color: $main-light;
-            border-color: $semi-trans_persian-green;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #pack-list-item {
-            background-color: transparent;
-            border-color: transparent;
-            padding: 0 0 0 1.5em;
-            margin-left: 1rem;
-            width: 45%;
-            font: {
-                size: 2em;
-            }
-        }
+display: none; /* Hidden by default */
+position: fixed; 
+z-index: 1; 
+padding-top: 5vh; 
+left: 0;
+top: 0;
+width: 100vw; 
+height: 100vh; 
+margin: 0;
+overflow: auto; 
+background-image: url('../media/icons/oldtime_map_background.jpg');
+background-size: contain;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: rgba(0,0,0, 0.85); 
 }
+
+/* --------- Packing list contents -------------- */
+.modal-content { 
+background-color: $semi-trans_main-light;
+padding: 0.25em;
+border: 1px solid #888;
+overflow: hidden;
+width: 80%;
+height: 100%;
+justify-content: center;
+align-items: center;
+overflow: scroll;
+
+h3 {
+    margin-left: 2em;
+    font-size: 3em;
+    padding: 0;
+    margin:  0 0 0 1em;
+}
+
+.close {
+    position: relative;
+    color: $main-dark;
+    font-size: 2em;
+    padding: 0.25em;
+    float: right;
+    border: solid rgba(26, 26, 26, 0.8);
+    border-width: 2px;
+}
+
+    .close:hover,
+    .close:focus {
+        background-color: $trans-background_persian-green;
+        color: $main-light;
+        border-color: $semi-trans_persian-green;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .pack-list-title {
+        text-align: left;
+    }
+
+    #pack-list-item {
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0 0 0 1.5em;
+        text-align: left;
+        width: 45%;
+        font: {
+            size: 2em;
+        }
+    }
+
+    
+}
+
+#pack-list-container {
+    margin: auto;
+}
+

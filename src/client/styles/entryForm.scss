@@ -1,8 +1,8 @@
 @import 'base'; 
 
 .section-container_entry-form {
-    margin: 25em;
-    margin-top: 2em;
+    // margin: 25em;
+    // margin-top: 2em;
     grid-area: ef;
     background-color: $trans-background_green;
 
@@ -19,12 +19,14 @@
         flex-direction: column;
         background-color: $trans-background_aqua;
         margin: auto;
+        min-width: 80%;
 
         input {
             margin-bottom: 1em;
             font: {
                 family: 'TerraIgnota'
             }
+            max-width: 40vw;
         }
 
         button {
