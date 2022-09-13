@@ -3,7 +3,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyPlugIn = require('copy-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
-// const WorkboxPlugIn = require('workbox-webpack-plugin')
+const WorkboxPlugIn = require('workbox-webpack-plugin')
+const { GenerateSW } = require('workbox-webpack-plugin')
 
 module.exports = {
     mode: 'production',
@@ -54,6 +55,7 @@ module.exports = {
         }),
         new CopyPlugIn({
             patterns: [{ from: 'src/client/media', to: 'assets'}]
-        })
+        }),
+        new WorkboxPlugIn.GenerateSW()
     ]
 }
