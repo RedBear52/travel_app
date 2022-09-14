@@ -15,6 +15,12 @@ const formSubmit = () => {
     formContainer.setAttribute('class', 'hidden')
     const wrapState = document.getElementById('wrapper')
     wrapState.classList.toggle('submitted')
+    const newTripButton = document.getElementById('new-trip')
+    newTripButton.classList.toggle('hidden')
+    newTripButton.addEventListener('click', () => {
+        newTripButton.classList.toggle('hidden')
+        location.reload()
+    })
 
     const listEle = document.getElementById('timer-li')
     listEle.classList.toggle('hidden')

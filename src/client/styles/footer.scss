@@ -32,6 +32,19 @@
     }
 }
 
+#new-trip {
+    background-color: $maize-crayola;
+
+    .hidden {
+        display: none;
+    }
+}
+
+#new-trip:hover {
+    background-color: $trans-background_green;
+}
+
+
 #copyright {
     border-radius: 0;
     background-color: $main-light;
@@ -48,6 +61,10 @@
         font: {
             size: 0.5em;
         }
+    }
+
+    #new-trip {
+        min-width: 40%;
     }
 }
 
