@@ -47,6 +47,7 @@ const countDownCalculator = (clientDate, clientDestination) => {
             `
         }
     }
+    
     let timerRef = setInterval(countDownTimer, 1000)
 }
 
