@@ -4,7 +4,7 @@ const CopyPlugIn = require('copy-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 const WorkboxPlugIn = require('workbox-webpack-plugin')
-// const GenerateSW  = require('workbox-webpack-plugin')
+const { GenerateSW } = require('workbox-webpack-plugin')
 
 module.exports = {
     mode: 'production',
