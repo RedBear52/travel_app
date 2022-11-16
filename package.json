@@ -39,6 +39,7 @@
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.19",
     "npm": "^8.17.0",
+    "remove-sensitive-info": "^1.0.0",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
